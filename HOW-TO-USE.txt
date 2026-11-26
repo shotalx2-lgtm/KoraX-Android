@@ -1,0 +1,2 @@
+Upload the included android.yml file to the repository at this exact path: .github/workflows/android.yml
+Commit it to the main branch. GitHub Actions will restore the project, run tests, build the APK, and upload the APK as the KoraX-Android-debug artifact. The workflow then commits the restored project source files back to main.
