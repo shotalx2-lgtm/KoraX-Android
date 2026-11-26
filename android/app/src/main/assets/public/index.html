@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>كورة X</title>
+<link rel="icon" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/icon-512.png">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--logo:url('icons/icon-512.png');--bg:#050505;--s1:#101311;--s2:#181c19;--ln:#ffffff17;--ink:#F4F6F1;--mu:#8D958F;--lm:#C6FF1A;--rd:#FF4D4D;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:auto;max-width:560px;min-height:100vh;background:radial-gradient(120% 38% at 50% -4%,#22330a 0,#050505 62%) no-repeat,var(--bg);color:var(--ink);font:500 15px/1.6 Tajawal,"Segoe UI",Tahoma,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#050505;z-index:30}
+button{font:inherit;color:inherit;cursor:pointer}
+.hd{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:linear-gradient(#050505 72%,#05050500)}
+.logo{font-weight:900;font-size:28px;text-shadow:0 0 18px #ffffff50}.logo b{color:var(--lm);font-family:Arial,sans-serif;margin-inline-start:7px;text-shadow:0 0 16px #C6FF1AAA}
+.bx{display:flex;gap:8px}
+.ib{position:relative;width:40px;height:40px;border-radius:14px;background:var(--s2);border:1px solid var(--ln);display:grid;place-items:center}
+.dot{position:absolute;top:5px;inset-inline-end:5px;min-width:16px;height:16px;border-radius:8px;background:var(--rd);color:#fff;font-size:10px;font-weight:800;display:grid;place-items:center}.dot:empty{display:none}
+main{padding:0 16px 130px}
+h2.sc{display:flex;justify-content:space-between;align-items:baseline;font-size:18px;font-weight:800;margin:24px 0 10px}h2.sc a{font-size:13px;color:var(--lm);font-weight:500;cursor:pointer}
+h3{font-size:16px;margin:20px 0 10px}
+.mu{color:var(--mu)}.c{text-align:center;padding:24px 0}
+.hs{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding:2px 16px 4px}.hs>*{flex:none}
+.pl{border:1px solid var(--ln);background:var(--s2);border-radius:20px;padding:7px 16px;font-size:14px;white-space:nowrap}.pl.on{background:var(--lm);color:#000;border-color:var(--lm);font-weight:800}
+.sg{display:flex;background:var(--s1);border:1px solid var(--ln);border-radius:16px;padding:4px;gap:4px}.sg button{flex:1;border:0;background:none;color:var(--mu);padding:9px 4px;border-radius:12px;font-weight:700}.sg .on{background:var(--lm);color:#000}
+.cd{background:linear-gradient(160deg,#171b17,#0d0f0d);border:1px solid var(--ln);border-radius:22px;padding:6px 14px}
+.cr{display:inline-grid;place-items:center;width:var(--z);height:var(--z);border-radius:50%;background:radial-gradient(circle at 30% 25%,hsl(var(--h) 60% 52%),hsl(var(--h) 55% 24%));color:#fff;font-style:normal;font-weight:800;font-size:calc(var(--z)*.45);border:2px solid #ffffff30;flex:none}
+.lv{background:var(--rd);color:#fff;border-radius:20px;padding:1px 10px;font-size:12px;font-weight:800;font-style:normal}
+.hero,.mh{background:radial-gradient(90% 130% at 85% 0,#dcff5e 0,#9bd400 46%,#334900 100%);color:#07100a;border-radius:28px;padding:16px;box-shadow:0 18px 50px #c6ff1a30;cursor:pointer}
+.mh{cursor:default}
+.hr{display:flex;align-items:center;justify-content:space-between}.hr small{font-weight:700}
+.hm{margin:14px 0 8px;text-align:center}.hm>div{display:grid;justify-items:center;gap:6px;width:30%;font-weight:800}
+.sc{font-size:42px;font-weight:900;letter-spacing:2px;width:34%!important}
+.hn{margin:6px 0 0;text-align:center;font-size:13px;font-weight:700;opacity:.8}
+.mr{display:grid;grid-template-columns:54px 1fr 34px;align-items:center;gap:8px;padding:12px 0;border-bottom:1px solid var(--ln);cursor:pointer}.mr:last-child{border:0}
+.mt{font-size:12px;color:var(--mu);text-align:center}.mm span{display:flex;align-items:center;gap:8px;margin:3px 0;font-weight:700}
+.ms{display:grid;text-align:center;font-weight:900;font-size:17px}.ms.w{color:var(--lm)}
+.lh{font-size:13px;color:var(--lm);font-weight:800;padding:14px 0 2px}
+.nc{width:250px;height:176px;border-radius:22px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background-size:cover;background-position:center;cursor:pointer}
+.nc::after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 15%,#000d)}.nc>*{position:relative;z-index:1}.nc b{font-size:15px;line-height:1.45}
+.tg2{align-self:flex-start;background:var(--lm);color:#000;font-size:11px;font-weight:800;border-radius:7px;padding:0 9px;margin-bottom:6px}
+.pc{width:138px;padding:14px 10px;text-align:center;border-radius:22px;cursor:pointer;position:relative;display:grid;justify-items:center;gap:4px}
+.pc b{font-size:14px}.pc small{color:var(--mu)}.pc .g{font-size:26px;font-weight:900;color:var(--lm);line-height:1}
+.rkb{position:absolute;top:8px;inset-inline-start:8px;background:var(--lm);color:#000;font-weight:900;font-size:11px;border-radius:8px;padding:0 7px}
+.tr{display:grid;grid-template-columns:26px 1fr 30px 40px 38px;align-items:center;gap:6px;padding:10px 4px 10px 0;padding-inline-start:12px;border-bottom:1px solid var(--ln);font-size:14px;text-align:center;position:relative;cursor:pointer}
+.tr.h{color:var(--mu);font-size:12px;cursor:default}.tr:last-child{border:0}.tr b{color:var(--lm)}
+.tr.a::before,.tr.r::before{content:"";position:absolute;inset-inline-start:0;top:10px;bottom:10px;width:3px;border-radius:2px;background:var(--lm)}.tr.r::before{background:var(--rd)}
+.tn{display:flex;align-items:center;gap:8px;text-align:start;font-weight:700}.tn small{display:block}
+.fd{display:flex;gap:3px;margin-top:3px}.fd i{width:7px;height:7px;border-radius:50%;background:#666}.fd .W{background:var(--lm)}.fd .L{background:var(--rd)}
+.ds{display:flex;gap:8px;margin-top:6px}.ds button{flex:1;border:1px solid var(--ln);background:var(--s2);border-radius:16px;padding:8px 0;display:grid;justify-items:center;line-height:1.3}.ds .on{background:var(--lm);color:#000;border-color:var(--lm)}.ds small{font-size:11px}
+.sbr{padding:10px 0}.sv{display:flex;justify-content:space-between;font-size:13px;font-weight:700}.sv span{color:var(--mu)}.bar{height:6px;border-radius:3px;background:#ffffff2a;margin-top:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--lm);border-radius:3px}
+.ev{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln);font-size:14px}.ev:last-child{border:0}.ev.a{flex-direction:row-reverse}.ev.n{justify-content:center;color:var(--mu)}.ev em{color:var(--lm);font-style:normal;font-weight:800;min-width:34px;text-align:center}
+.pitch{position:relative;height:440px;border-radius:22px;background:repeating-linear-gradient(#1b5a1f 0 44px,#17501b 44px 88px);border:2px solid #ffffff55;overflow:hidden}
+.pitch::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px solid #ffffff55}.pitch::after{content:"";position:absolute;left:50%;top:50%;width:80px;height:80px;margin:-40px;border:2px solid #ffffff55;border-radius:50%}
+.pitch b{position:absolute;width:26px;height:26px;margin:-13px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;background:var(--lm);color:#000}.pitch b.a{background:#fff}
+.nr,.sr{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--ln);cursor:pointer}.sr small{margin-inline-start:auto;color:var(--mu)}
+.th{width:64px;height:64px;border-radius:16px;flex:none;background-size:cover}.nr b{line-height:1.4}.nr small{display:block;color:var(--mu)}
+.g3,.g4,.g2{display:grid;gap:10px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}
+.tl2{background:var(--s2);border:1px solid var(--ln);border-radius:18px;padding:12px;text-align:center}.tl2 small{display:block;color:var(--mu);font-size:12px}.tl2 b{font-size:21px;font-weight:900}
+.ph{position:relative;border-radius:28px;padding:20px;min-height:190px;background:radial-gradient(90% 90% at 20% 0,#2c3f08,#0c0e0b);border:1px solid var(--ln);overflow:hidden}
+.ph .big{font-size:34px;font-weight:900;line-height:1.15;max-width:70%}.ph .tm{display:flex;gap:8px;align-items:center;margin-top:10px;font-weight:700}
+.no{position:absolute;inset-inline-end:14px;top:4px;font-size:110px;font-style:normal;font-weight:900;color:#C6FF1A22;font-family:Arial}.pos{display:inline-block;margin-top:12px;border:1px solid var(--lm);color:var(--lm);border-radius:10px;padding:0 12px;font-size:12px;font-weight:800}
+.tro{width:130px;text-align:center;padding:14px 8px}.tro span{font-size:34px}.tro small{display:block;color:var(--mu)}
+.car{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center;padding:8px 0;font-size:14px}.car i{display:block;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--lm),#4f6b00)}
+.sw{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid var(--ln)}.sw input{display:none}.sw i{width:46px;height:27px;border-radius:14px;background:#2b312c;position:relative;transition:.2s}.sw i::after{content:"";position:absolute;top:3px;inset-inline-start:3px;width:21px;height:21px;border-radius:50%;background:#fff;transition:.2s}.sw input:checked+i{background:var(--lm)}.sw input:checked+i::after{inset-inline-start:22px;background:#000}
+input[type=range]{width:100%;accent-color:#C6FF1A}
+.bt{width:100%;border:0;background:var(--lm);color:#000;font-weight:900;font-size:17px;border-radius:18px;padding:15px;box-shadow:0 10px 34px #c6ff1a50}.bt.g{background:var(--s2);color:var(--ink);box-shadow:none;border:1px solid var(--ln)}
+.sb2{width:100%;background:var(--s2);border:1px solid var(--ln);border-radius:18px;padding:13px 16px;color:var(--ink);font:inherit;font-size:16px;margin-bottom:12px}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 8px;text-align:center;font-size:13px}.fg>div{position:relative;cursor:pointer;display:grid;justify-items:center;gap:5px}.fg .cr{outline:3px solid transparent}.fg .on .cr{outline-color:var(--lm)}.fg .on::after{content:"♥";position:absolute;top:-4px;inset-inline-end:14%;color:var(--lm)}
+.nav{position:fixed;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:536px;margin:auto;height:68px;border-radius:26px;background:#0b0d0bee;backdrop-filter:blur(18px);border:1px solid var(--ln);display:flex;align-items:center;justify-content:space-around;z-index:20}
+.nav button{background:none;border:0;color:var(--mu);font-size:11px;font-weight:700;display:grid;justify-items:center;gap:2px;width:62px}.nav .on{color:var(--lm)}
+.nav .ctr{width:62px;height:62px;border-radius:50%;background:var(--lm);color:#000;margin-top:-30px;box-shadow:0 0 0 6px #050505,0 10px 30px #C6FF1A66;display:grid;place-items:center}
+.ov{position:fixed;inset:0;z-index:40;background:var(--bg);overflow-y:auto;padding-top:env(safe-area-inset-top,0px);display:none;max-width:560px;margin:auto}.ov.on{display:block}
+.oh{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#050505;font-weight:800;font-size:17px}.oh span{min-width:40px}
+.ob{padding:4px 16px calc(40px + env(safe-area-inset-bottom,0px))}
+.art{height:230px;border-radius:26px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover}.art h1{font-size:25px;line-height:1.4;margin:6px 0 0}
+.bn{position:fixed;top:calc(8px + env(safe-area-inset-top,0px));inset-inline:12px;max-width:536px;margin:auto;z-index:60;background:linear-gradient(135deg,#1c2a06f2,#0b0e0af2);backdrop-filter:blur(20px);border:1px solid #C6FF1A55;border-radius:24px;padding:14px;transform:translateY(-160%);transition:transform .45s cubic-bezier(.2,1.2,.4,1);box-shadow:0 20px 50px #000a}.bn.in{transform:none}
+.bn .bt1{display:flex;justify-content:space-between;font-size:13px;font-weight:800;color:var(--lm)}.bn .bs{display:flex;align-items:center;justify-content:center;gap:14px;margin:8px 0;font-size:28px;font-weight:900}
+.bn p{margin:6px 0 0;text-align:center;font-weight:700;font-size:14px}.tl{height:6px;border-radius:3px;background:#ffffff22;position:relative;margin:12px 0 6px}.tl i{position:absolute;top:-4px;width:14px;height:14px;margin-inline-start:-7px;border-radius:50%;background:#fff}.tl .g{background:var(--lm)}.tl .rc{background:var(--rd)}
+.sp{position:fixed;inset:0;z-index:70;display:none;background:#000 var(--logo) center/cover;max-width:560px;margin:auto}.sp.on{display:flex;flex-direction:column;justify-content:flex-end;padding:24px 24px calc(30px + env(safe-area-inset-bottom,0px));background-image:linear-gradient(#0000 35%,#000 88%),var(--logo)}
+.sp p{text-align:center;font-size:19px;font-weight:700;margin:0 0 18px}.sp button+button{margin-top:10px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>.nav button{width:50px;font-size:10px}.nav .ctr{width:58px;height:58px;margin-top:-28px}
+.g2 .nc{width:auto;height:150px}.oh span{display:flex;gap:6px;justify-content:flex-end}
+[dir=ltr] .oh .ib svg{transform:scaleX(-1)}[dir=ltr] .arw{display:inline-block;transform:scaleX(-1)}
+.nodemo .hero,.nodemo [data-act=sim]{display:none}
+.pav{border-radius:50%;object-fit:cover;flex:none}
+.clb{width:78px;text-align:center;font-size:12px;display:grid;justify-items:center;gap:6px;cursor:pointer}
+.nf{height:250px;border-radius:26px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background-size:cover;cursor:pointer}.nf::after{content:"";position:absolute;inset:0;background:linear-gradient(#0000 25%,#000e)}.nf>*{position:relative;z-index:1}.nf h2{font-size:21px;line-height:1.45;margin:4px 0}
+.fact{margin-top:18px;background:linear-gradient(135deg,#1f2d08,#0e100e)}.fact p{margin:4px 0;line-height:1.8}.fact a{color:var(--lm);cursor:pointer;font-size:13px}
+.pr{margin-top:12px;padding:12px 14px}.pb{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:10px 0;gap:2px}.pb i{background:var(--lm)}.pb .d{background:#8a8f8c}.pb .aw{background:#fff;flex:1}
+.tcp{display:grid;grid-template-columns:60px 1fr auto;gap:6px 12px;align-items:center;padding:14px;margin-bottom:10px;border-radius:24px;background:linear-gradient(135deg,#7a4fa3,#4b2d72);cursor:pointer}.tin small{color:#e8dcf5;display:block}.fee{background:var(--lm);color:#000;font-weight:900;border-radius:20px;padding:3px 16px}.tto{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-size:13px;color:#eadff7}
+.trc{margin-bottom:12px;padding:14px}.cf{color:#ff7a2b;font-weight:800;font-size:13px}.trp{display:grid;justify-items:center;margin:10px 0;cursor:pointer}.trp b{font-size:20px;margin-top:6px}.trt{display:flex;justify-content:center;align-items:center;gap:8px;font-weight:700;flex-wrap:wrap}.pls{display:flex;justify-content:center;gap:8px;margin:10px 0}.pls span{background:#1f3a35;color:#7ff0d6;border-radius:20px;padding:2px 14px;font-weight:800;font-size:13px}
+.vt{display:flex;justify-content:center;gap:24px;margin:8px 0}.vt button{background:none;border:1px solid var(--ln);border-radius:14px;padding:4px 14px;font-weight:800}.vt .on{border-color:var(--lm);color:var(--lm)}
+details summary{text-align:center;color:var(--mu);cursor:pointer;font-size:13px}details p{font-size:13px}
+.pt{display:grid;gap:8px}.pn{display:flex;align-items:center;gap:8px;font-weight:800}.pn em{margin-inline-start:auto;font-style:normal;color:var(--lm)}
+.pitch2{position:relative;aspect-ratio:68/105;border-radius:18px;overflow:hidden;background:repeating-linear-gradient(0deg,#217a2b 0 9.5%,#1b6a24 9.5% 19%);box-shadow:inset 0 0 70px #000a,0 22px 40px #000a;border:3px solid #0c3b12}
+.pitch2::after{content:"";position:absolute;inset:0;background:radial-gradient(75% 55% at 50% 50%,#ffffff2a,#0000 70%);pointer-events:none}.pitch2 svg{position:absolute;inset:0;width:100%;height:100%}
+.pp{position:absolute;transform:translate(-50%,-50%);display:grid;justify-items:center;gap:2px;z-index:2}.pp i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:12px;border:2px solid #ffffffcc;box-shadow:0 4px 8px #0008}.pp span{font-size:9.5px;background:#000a;color:#fff;padding:0 5px;border-radius:6px;white-space:nowrap}
+#ov[data-t=p]{background:linear-gradient(#10112b,#0a0b18)}#ov[data-t=p] .oh{position:absolute;inset-inline:0;background:none}#ov[data-t=p] .ob{padding-top:0;padding-inline:0}
+.pfh{position:relative;min-height:430px;padding:70px 18px 18px;overflow:hidden;background:radial-gradient(80% 60% at 70% 30%,hsl(var(--h) 45% 20%),#10112b);display:flex;flex-direction:column}
+.pfw{position:absolute;inset-inline-start:-10px;top:60px;font-size:360px;font-weight:900;line-height:1;color:#ffffff0d;font-family:Arial}
+.pfb{display:flex;position:relative;z-index:1}.cc{width:48px;height:48px;border-radius:50%;background:#000;display:grid;place-items:center}.ff{width:48px;height:48px;border-radius:50%;background:#1c1d33;display:grid;place-items:center;font-size:26px;margin-inline-start:-10px}
+.pfh h1{position:relative;z-index:1;font-size:46px;line-height:1.1;margin:14px 0;max-width:58%}
+.pfs{margin-top:auto;position:relative;z-index:1;display:flex;align-items:center;gap:8px}.pfs b{font-size:18px;position:absolute;inset-inline-start:14px;top:12px}.pfs small{color:var(--mu);letter-spacing:1px}
+.pfp{position:absolute;inset-inline-end:-30px;bottom:-30px;-webkit-mask-image:linear-gradient(#000 70%,#0000);mask-image:linear-gradient(#000 70%,#0000)}.pfp .pav{border-radius:30% 30% 0 0}
+.pfx{margin:-70px 14px 0;position:relative}.pfx .tl2{background:#ffffff14;backdrop-filter:blur(10px);text-align:start;min-height:96px;display:flex;flex-direction:column;justify-content:space-between}
+.nd{display:flex;align-items:center;gap:10px;margin:14px 16px 8px;font-weight:700;color:#3ea0ff}.nd>i{width:22px;height:22px;border-radius:50%;border:5px solid #1e7bff}.avs{display:flex;margin-inline-start:auto}.avs .pav{margin-inline-start:-10px;border:2px solid #10112b}
+.pf .cd{margin:12px 14px 0;background:#15162b;padding:14px}
+.nwr{display:flex;gap:12px;margin-top:10px;align-items:center}.nwr span{text-align:center;color:var(--mu);font-size:12px}.nwr span b{display:block;font-size:18px;color:var(--ink)}.nwr p{margin:0;font-weight:700}
+.pfg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:center}.boot{background:#5ca361;border-radius:18px;padding:12px;display:grid;justify-items:end;min-height:110px;align-content:space-between}.boot b{font-size:44px;line-height:1;color:#fff}
+.rg{text-align:center}.rg small{display:block;font-size:11px;color:var(--mu);margin-top:6px}.rgc{width:76px;height:76px;margin:auto;border-radius:50%;background:conic-gradient(#5ca361 calc(var(--p)*1%),#ffffff1c 0);display:grid;place-items:center;position:relative}.rgc::before{content:"";position:absolute;inset:8px;border-radius:50%;background:#15162b}.rgc b{position:relative;font-size:22px}
+.pf h3{margin:0 0 12px;font-size:15px}.pf .g4>div b{font-size:28px;font-weight:800;display:flex;align-items:center;gap:6px}.pf .g4 small{color:var(--mu);font-size:11px;display:block}
+u.yc,u.rc2{display:inline-block;width:14px;height:20px;border-radius:3px;background:#f5c518}u.rc2{background:#e53935}
+.trf{width:150px;min-height:120px;border:1px solid var(--ln);border-radius:18px;padding:12px;position:relative;background:#1a1b33}.trf small{display:block;font-weight:700;color:var(--ink)}.trf span{position:absolute;inset-inline-end:12px;bottom:8px;font-size:46px}.trf i{position:absolute;inset-inline-start:12px;bottom:12px;width:26px;height:26px;border-radius:50%;background:#5ca361;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px}
+.yrs{display:flex;justify-content:space-between;margin-bottom:14px}.yrs span{background:#232443;border-radius:14px;padding:2px 14px;font-size:13px}
+.tlr{height:42px;position:relative}.tlb{height:4px;border-radius:2px;position:relative;top:19px}.tlc{position:absolute;top:-11px;inset-inline-start:-6px}
+.bn.gl{border-color:#C6FF1A;box-shadow:0 20px 60px #C6FF1A33}.bm{display:flex;align-items:center;gap:12px;margin:10px 0}.bm .pav{border:2px solid var(--lm)}.bw{flex:1;min-width:0}.bw b{font-size:19px;display:block}.bw small{color:var(--mu)}.bsc{display:flex;align-items:center;gap:6px;font-size:22px;font-weight:900}.eic{font-size:38px}
+.bac{display:flex;gap:8px;margin-top:10px}.bac button{flex:1;border:1px solid #ffffff2a;background:#ffffff12;border-radius:14px;padding:8px;font-weight:700}.bac button:first-child{background:var(--lm);color:#000;border:0}
+.sp.on.s0{background:radial-gradient(60% 42% at 50% 40%,#30500a,#050505 72%)!important;justify-content:center;align-items:center;text-align:center}
+.lg0{width:150px;height:150px;border-radius:38px;background:var(--logo) center/cover;box-shadow:0 0 0 1px #ffffff22,0 0 80px #c6ff1a66;animation:pls 1.8s ease-in-out infinite}@keyframes pls{50%{transform:scale(1.06);box-shadow:0 0 0 1px #ffffff33,0 0 120px #c6ff1aaa}}
+.t0{font-size:44px;font-weight:900;margin:18px 0 0}.t0 b{color:var(--lm);font-family:Arial;text-shadow:0 0 22px #c6ff1a}.sp p.s0{opacity:.7;margin:0;font-size:16px}
+.ld{width:160px;height:4px;border-radius:2px;background:#ffffff1f;margin-top:30px;overflow:hidden}.ld i{display:block;height:100%;background:var(--lm);animation:ldg 1.6s ease-out forwards}@keyframes ldg{from{width:0}to{width:100%}}
+.orb{position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid #c6ff1a22;animation:spn 14s linear infinite}@keyframes spn{to{transform:rotate(360deg)}}
+.sp.on.s1,.sp.on.s2,.sp.on.s3,.sp.on.s4{background:radial-gradient(70% 45% at 50% 28%,#26400a,#050505 70%)!important;justify-content:flex-end;text-align:center}
+.skp{position:absolute;top:calc(20px + env(safe-area-inset-top,0px));inset-inline-end:20px;background:#ffffff14;border:0;border-radius:20px;padding:6px 16px}
+.ill{position:relative;width:260px;height:260px;margin:12vh auto auto;display:grid;place-items:center;font-size:120px;border-radius:50%;background:radial-gradient(circle,#c6ff1a33,#0000 68%)}.ill::before{content:"";position:absolute;inset:0;border-radius:50%;border:1px dashed #c6ff1a55;animation:spn 20s linear infinite}.ill i{position:absolute;font-size:34px;font-style:normal;animation:flt 3s ease-in-out infinite}.o1{top:10px;inset-inline-end:10px}.o2{bottom:20px;inset-inline-start:6px;animation-delay:1s}@keyframes flt{50%{transform:translateY(-12px)}}
+.sp h2{font-size:28px;margin:10px 0 6px}.sp p{font-size:16px;color:var(--mu);margin:0 0 16px}
+.dots{display:flex;justify-content:center;gap:6px;margin-bottom:18px}.dots i{width:8px;height:8px;border-radius:4px;background:#ffffff33}.dots i.on{width:26px;background:var(--lm)}
+.lgl{display:grid;gap:10px;margin:10px 0 18px}.lgc{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--ln);background:var(--s1);border-radius:20px;padding:18px 20px;font-size:18px;cursor:pointer;text-align:start}.lgc.on{border-color:var(--lm);background:#1d2a07;color:var(--lm)}.lgc span{font-size:28px}
+</style><link rel="manifest" href="manifest.webmanifest"></head>
+<body>
+<div class="sp" id="sp"><p>كل المباريات والأخبار والأرقام في مكان واحد</p><button class="bt" data-act="start">ابدأ الآن</button><button class="bt g" data-act="skip">تخطي</button></div>
+<header class="hd"><div class="logo">كورة<b>X</b></div><div class="bx"><button class="ib" data-ov="s:" aria-label="بحث" id="b1"></button><button class="ib" data-ov="n:" aria-label="الإشعارات" id="b2"><span class="dot" id="bd"></span></button></div></header>
+<main id="pg"></main>
+<nav class="nav" id="nv"></nav>
+<div class="ov" id="ov"></div><div id="bn"></div>
+<script src="config.js"></script><script>
+const $=s=>document.querySelector(s),E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* ===== موصلات البيانات تُحمّل من config.js. وضع البيانات التجريبية معطّل في هذا الإصدار. =====*/
+const CONFIG={
+ standings:async lg=>null,  // [{name,p,w,d,l,gf,ga,pts,form:'WWDLW'}]
+ news:async lg=>null,       // [{title,desc,body,img,time,tag}]
+ matches:async date=>null,  // date='YYYY-MM-DD' → [{id,lg,h,a,hs,as,st:'live|ft|ns',min,time}]
+ scorers:async lg=>null,    // [{name,team,goals,assists}]
+ sounds:{}                  // اختياري: {goal:'goal.mp3',ft:'ft.mp3',...}
+};
+const LS={g(k,d){try{const v=localStorage.getItem('kx_'+k);return v?JSON.parse(v):d}catch(e){return d}},s(k,v){try{localStorage.setItem('kx_'+k,JSON.stringify(v))}catch(e){}}};
+const ST=Object.assign({snd:1,vol:.7,ng:1,nc:1,np:1,nn:1,hid:[],fav:[],onb:0},LS.g('st',{})),save=()=>LS.s('st',ST);
+const LGS=[['egy','الدوري المصري'],['ksa','دوري روشن'],['eng','البريميرليج'],['esp','الليغا'],['ita','الكالتشو'],['ger','البوندسليغا'],['fra','الليغ 1'],['ucl','أبطال أوروبا'],['uel','اليوروبا'],['ned','الهولندي'],['por','البرتغالي'],['tur','التركي'],['bra','البرازيلي'],['arg','الأرجنتيني'],['usa','MLS'],['mex','المكسيكي'],['jpn','الياباني']];
+const TM={egy:'الأهلي,الزمالك,بيراميدز,سيراميكا,المصري,بيسكو,الإسماعيلي,الاتحاد',ksa:'الهلال,النصر,الاتحاد,الأهلي,الشباب,الفتح,التعاون,الرائد',eng:'ليفربول,مان سيتي,آرسنال,تشيلسي,توتنهام,مان يونايتد,نيوكاسل,أستون فيلا',esp:'ريال مدريد,برشلونة,أتلتيكو,إشبيلية,فياريال,فالنسيا,بيتيس,سوسيداد',ita:'إنتر,ميلان,يوفنتوس,نابولي,روما,لاتسيو,أتالانتا,فيورنتينا',ger:'بايرن,دورتموند,لايبزيغ,ليفركوزن,شتوتغارت,فرانكفورت,فولفسبورغ,فرايبورغ'};
+const POOL='محمد صلاح,إيرلينج هالاند,كيليان مبابي,فينيسيوس,وسام أبو علي,سالم الدوسري,ميتروفيتش,لاوتارو,هاري كين,بيلينغهام,زيزو,محمد شريف'.split(',');
+const teams=l=>(TM[l]||'').split(',').filter(Boolean),lgn=l=>(LGS.find(x=>x[0]===l)||[0,''])[1],vis=()=>LGS.filter(l=>!ST.hid.includes(l[0]));
+const rnd=a=>()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296},hs=s=>{let h=7;for(const c of String(s))h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0};
+const TEAM_LOGOS=Object.create(null),PLAYER_PHOTOS=Object.create(null);
+const crest=(n,z=30)=>{const u=TEAM_LOGOS[n],ch=[...String(n).replace(/[^\p{L}]/gu,'')][0]||'?';return u&&/^https:\/\//.test(u)?`<img class="cr" loading="lazy" alt="" style="--z:${z}px;width:${z}px;height:${z}px;object-fit:contain;padding:2px;background:#fff" src="${E(u)}">`:`<i class="cr" style="--z:${z}px;--h:${hs(n)%360}">${E(ch)}</i>`};
+const IC={search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',bell:'<path d="M6 16v-5a6 6 0 1 1 12 0v5l2 2H4zM10 21h4"/>',back:'<path d="m9 6 6 6-6 6"/>',home:'<path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/>',cal:'<rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/>',bolt:'<path d="M13 2 5 14h6l-1 8 8-12h-6z"/>',list:'<path d="M5 6h14M5 12h14M5 18h9"/>',more:'<circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/>',star:'<path d="m12 3 2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 17l-5.6 3 1.3-6.2L3 9.5l6.3-.7z"/>',share:'<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/>'};
+const ic=(n,z=22,f)=>`<svg viewBox="0 0 24 24" width="${z}" height="${z}" fill="${f||'none'}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
+/* ===== بيانات تجريبية ===== */
+function dStand(lg){const t=teams(lg),r=rnd(hs(lg));return t.map((n,i)=>{const p=14;let w=Math.max(0,Math.min(p,Math.round(10-i*1.15+r()*3))),d=Math.floor(r()*4);if(w+d>p)d=p-w;const l=p-w-d,gf=Math.round(w*2+d+r()*7),ga=Math.round(l*2+d+r()*5+3);let f='';for(let k=0;k<5;k++){const x=r()*p;f+=x<w?'W':x<w+d?'D':'L'}return{name:n,p,w,d,l,gf,ga,pts:w*3+d,form:f}}).sort((a,b)=>b.pts-a.pts||(b.gf-b.ga)-(a.gf-a.ga))}
+function dSc(lg){const r=rnd(hs(lg+'s')),t=dStand(lg);return t.length?POOL.slice().sort(()=>r()-.5).slice(0,6).map((n,i)=>({name:n,team:t[Math.floor(r()*Math.min(5,t.length))].name,goals:12-i+Math.floor(r()*2),assists:Math.floor(r()*8)})).sort((a,b)=>b.goals-a.goals):[]}
+function dNews(lg){const t=dStand(lg),s=dSc(lg);if(!t.length)return[];const[a,b,c,d]=t.map(x=>x.name);return[[a+' يتفوق على '+b+' في قمة الجولة','مباراة'],[s[0].name+' يواصل التألق ويتصدر الهدافين','نجوم'],['مفاجأة: '+c+' يوقف سلسلة انتصارات '+a,'مباراة'],['تقرير: '+d+' يقترب من تجديد عقد نجمه الأول','انتقالات'],['تحليل: لماذا '+a+' الأقوى هجومياً هذا الموسم؟','تحليل'],['رسمياً: إيقاف لاعب من '+b+' مباراتين','رسمي']].map((x,i)=>({title:x[0],tag:x[1],desc:'آخر التطورات من داخل الملعب.',body:x[0]+'. تتواصل المنافسة على الصدارة مع اقتراب الجولات الحاسمة، وتتجه الأنظار إلى المباريات القادمة.\n\nالأجهزة الفنية تدرس الغيابات والإيقافات، والجماهير تنتظر مواجهات مشتعلة في الأسابيع المقبلة.',time:'منذ '+(i*2+1)+' ساعة'}))}
+const TODAY=new Date(),dk=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`,MC={};
+function dMatch(d){const k=dk(d),td=dk(TODAY),r=rnd(hs(k)),o=[];['egy','ksa','eng','esp','ita','ger'].forEach((lg,li)=>{if(ST.hid.includes(lg))return;const t=teams(lg);for(let j=0;j<2;j++){const past=k<td||(k===td&&j===0&&lg!=='egy'),m={id:k+lg+j,lg,h:t[j*2+Math.floor(r()*2)],a:t[j*2+3+Math.floor(r()*2)],hs:0,as:0,st:past?'ft':'ns',time:(16+j*3+li%3)+':'+(r()<.5?'00':'30')};if(past){m.hs=Math.floor(r()*4);m.as=Math.floor(r()*3)}o.push(m)}});if(k===td)o.unshift(liveM());return o}
+const gS=async l=>{const rows=await CONFIG.standings(l).catch(()=>null);_A=_A||[];if(Array.isArray(rows)&&rows.length){rows.forEach(x=>{if(x.logo&&/^https:\/\//.test(x.logo))TEAM_LOGOS[x.name]=x.logo;const key=(x.teamId||x.name)+'|'+l;if(!_A.some(y=>((y.teamId||y.name)+'|'+y.lg)===key))_A.push({...x,lg:l})});return rows}return CONFIG.demo?dStand(l):[]};
+const gSc=async l=>{const rows=await CONFIG.scorers(l).catch(()=>null);if(Array.isArray(rows)&&rows.length){rows.forEach(x=>{if(x.photo&&/^https:\/\//.test(x.photo))PLAYER_PHOTOS[x.name]=x.photo});SCACHE=rows;return rows}SCACHE=CONFIG.demo?dSc(l):[];return SCACHE};
+const gN=async l=>{const rows=await CONFIG.news(l).catch(()=>null);NC=Array.isArray(rows)?rows:(CONFIG.demo?dNews(l):[]);return NC};
+const gM=async d=>{const rows=await CONFIG.matches(dk(d)).catch(()=>null);const list=Array.isArray(rows)?rows:(CONFIG.demo?dMatch(d):[]);_A=_A||[];list.forEach(m=>{MC[m.id]=m;if(m.homeLogo)TEAM_LOGOS[m.h]=m.homeLogo;if(m.awayLogo)TEAM_LOGOS[m.a]=m.awayLogo;[[m.h,m.homeId,m.homeLogo],[m.a,m.awayId,m.awayLogo]].forEach(([name,id,logo])=>{if(!name)return;const key=(id||name)+'|'+m.lg;if(!_A.some(x=>((x.teamId||x.name)+'|'+x.lg)===key))_A.push({name:name,teamId:id||'',logo:logo||'',lg:m.lg})})});return list};
+let NC=[],_A=[],SCACHE=[];const ALL=()=>_A||(CONFIG.demo?(_A=LGS.flatMap(l=>dStand(l[0]).map(r=>({...r,lg:l[0]})))):[]);
+/* ===== الأصوات (مُولَّدة برمجياً، ويمكن استبدالها بملفات عبر CONFIG.sounds) ===== */
+let AC,MG;const ac=()=>{if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();MG=AC.createGain();MG.connect(AC.destination)}if(AC.state==='suspended')AC.resume();MG.gain.value=ST.vol;return AC};
+function tn(f,t,d,ty,v,f2){const c=ac(),o=c.createOscillator(),g=c.createGain(),n=c.currentTime+t;o.type=ty||'sine';o.frequency.setValueAtTime(f,n);if(f2)o.frequency.exponentialRampToValueAtTime(f2,n+d);g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(v||.2,n+.02);g.gain.exponentialRampToValueAtTime(.0001,n+d);o.connect(g);g.connect(MG);o.start(n);o.stop(n+d+.05)}
+function ns(t,d,v,f,sw){const c=ac(),b=c.createBuffer(1,c.sampleRate*d,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<a.length;i++)a[i]=Math.random()*2-1;const s=c.createBufferSource(),fl=c.createBiquadFilter(),g=c.createGain(),n=c.currentTime+t;s.buffer=b;fl.type='bandpass';fl.frequency.value=f;g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(v,n+(sw||d/3));g.gain.exponentialRampToValueAtTime(.0001,n+d);s.connect(fl);fl.connect(g);g.connect(MG);s.start(n)}
+function wh(t,d){const c=ac(),o=c.createOscillator(),l=c.createOscillator(),lg=c.createGain(),g=c.createGain(),n=c.currentTime+t;o.frequency.value=2900;l.frequency.value=32;lg.gain.value=90;l.connect(lg);lg.connect(o.frequency);g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(.22,n+.03);g.gain.setValueAtTime(.22,n+d-.05);g.gain.exponentialRampToValueAtTime(.0001,n+d);o.connect(g);g.connect(MG);o.start(n);l.start(n);o.stop(n+d+.05);l.stop(n+d+.05)}
+const SND={goal(){ns(0,4,.5,700,1.2);ns(0,4,.25,1800,1.5);[392,523,659,784].forEach((f,i)=>tn(f,i*.12,.5,'triangle',.15));tn(110,0,1.6,'sawtooth',.08,90)},kickoff(){wh(0,.8)},ht(){wh(0,.45);wh(.6,.45);wh(1.2,.9)},second(){wh(0,.4);wh(.55,.4)},ft(){wh(0,.35);wh(.5,.35);wh(1,1.1)},notif(){tn(880,0,.18,'sine',.2);tn(1320,.16,.3,'sine',.2)},sub(){tn(420,0,.25,'triangle',.2,880);tn(880,.3,.25,'triangle',.18,520)},card(){ns(0,.15,.4,300,.01);tn(180,0,.25,'square',.12,90)},var(){[0,.25,.5].forEach(t=>tn(1500,t,.12,'square',.1))}};
+const SNL=[['goal','هدف'],['kickoff','بداية المباراة'],['ht','نهاية الشوط الأول'],['second','بداية الشوط الثاني'],['ft','نهاية المباراة'],['notif','إشعار'],['sub','تبديل'],['card','بطاقة'],['var','تقنية الفيديو']];
+function play(k){if(!ST.snd)return;try{const u=CONFIG.sounds[k];if(u){ac();const a=new Audio(u);a.volume=ST.vol;a.play().catch(()=>{});return}SND[k]()}catch(e){}}
+addEventListener('pointerdown',()=>{try{ac()}catch(e){}},{once:true});
+/* ===== المباراة المباشرة التجريبية ===== */
+const LIVE={ph:'ns',min:0,hs:0,as:0,ev:[]};let tm=null,pz=0,NT=[],UNR=0;
+const SC=[[1,'ko'],[12,'g','h','وسام أبو علي'],[23,'yc','a','أحمد فتوح'],[31,'g','a','أحمد سيد زيزو'],[45,'ht'],[46,'sh'],[58,'sub','h','إمام عاشور ← مروان عطية'],[63,'var','a','مراجعة تسلل'],[67,'g','h','محمد شريف'],[78,'rc','a','محمود علاء'],[83,'g','h','حسين الشحات'],[90,'ft']];
+const TT={ko:'انطلقت المباراة',g:'هدف! ⚽',yc:'بطاقة صفراء',rc:'بطاقة حمراء',sub:'تبديل',var:'تقنية الفيديو',ht:'نهاية الشوط الأول',sh:'بدأ الشوط الثاني',ft:'صافرة النهاية'},EI={g:'⚽',yc:'🟨',rc:'🟥',sub:'🔄',var:'📺',ko:'⏱',ht:'⏱',sh:'⏱',ft:'⏱'},SM={ko:'kickoff',g:'goal',yc:'card',rc:'card',sub:'sub',var:'var',ht:'ht',sh:'second',ft:'ft'};
+const mtx=()=>LIVE.ph==='ht'?'استراحة':LIVE.min+"'";
+const liveM=()=>({id:'L',lg:'egy',h:'الأهلي',a:'الزمالك',hs:LIVE.hs,as:LIVE.as,st:LIVE.ph==='ns'?'ns':LIVE.ph==='ft'?'ft':'live',mt:mtx(),time:'21:00'});
+function startLive(){clearInterval(tm);Object.assign(LIVE,{ph:'1h',min:0,hs:0,as:0,ev:[]});pz=0;tick();tm=setInterval(tick,650)}
+function tick(){if(pz>0){pz--;return}LIVE.min++;document.querySelectorAll('.lvmin').forEach(x=>x.textContent=mtx());SC.filter(e=>e[0]===LIVE.min).forEach(fire)}
+function fire(e){const[m,t,s,x]=e;if(t==='g')LIVE[s==='h'?'hs':'as']++;if(t==='ko')LIVE.ph='1h';if(t==='ht'){LIVE.ph='ht';pz=6}if(t==='sh')LIVE.ph='2h';if(t==='ft'){LIVE.ph='ft';clearInterval(tm)}const ev={m,t,s,x};LIVE.ev.push(ev);play(SM[t]);const tp=t==='g'?'ng':['yc','rc','sub','var'].includes(t)?'nc':'np';NT.unshift({t:TT[t],b:`الأهلي ${LIVE.hs}-${LIVE.as} الزمالك • ${m}'${x?' • '+x:''}`});UNR++;banner(ev,tp);bd();refresh();if(t==='ft')setTimeout(()=>{NT.unshift({t:'خبر عاجل',b:'الأهلي يحسم الديربي ويقفز إلى الصدارة'});UNR++;if(ST.nn){play('notif');simple('خبر عاجل','الأهلي يحسم الديربي ويقفز إلى الصدارة')}bd()},2800)}
+function banner(e,tp){if(!ST[tp])return;const b=document.createElement('div');b.className='bn';b.innerHTML=`<div class="bt1"><span>كورة X • ${E(lgn('egy'))}</span><span>${TT[e.t]}</span></div><div class="bs">${crest('الأهلي',38)}<span>${LIVE.hs} - ${LIVE.as}</span>${crest('الزمالك',38)}<i class="lv">${mtx()}</i></div><div class="tl">${LIVE.ev.filter(x=>['g','rc'].includes(x.t)).map(x=>`<i class="${x.t}" style="inset-inline-start:${x.m/90*100}%"></i>`).join('')}</div><p>${E(e.x||TT[e.t])}</p>`;show(b)}
+function simple(t,b){const d=document.createElement('div');d.className='bn';d.innerHTML=`<div class="bt1"><span>كورة X</span><span>الآن</span></div><p style="font-size:16px">${E(t)}</p><p class="mu">${E(b)}</p>`;show(d)}
+function show(b){$('#bn').appendChild(b);setTimeout(()=>b.classList.add('in'),30);setTimeout(()=>{b.classList.remove('in');setTimeout(()=>b.remove(),500)},4300)}
+const bd=()=>{$('#bd').textContent=UNR||''};
+/* ===== الواجهة ===== */
+let P='home',CUR='egy',TAB='t',DATE=0,FLT='all',RT=0,OV=null;const OVS=[];
+const NAV=[['home','ملعبي','home'],['matches','الجولة','cal'],['live','','bolt'],['table','الترتيب','list'],['more','المزيد','more']];
+const chips=()=>`<div class="hs">${vis().map(l=>`<button class="pl ${CUR===l[0]?'on':''}" data-lg="${l[0]}">${l[1]}</button>`).join('')}</div>`;
+const mr=m=>{const lv=m.st==='live',ns=m.st==='ns';return`<div class="mr" data-ov="m:${E(m.id)}"><div class="mt">${lv?`<i class="lv lvmin">${E(m.mt||m.min+"'")}</i>`:m.st==='ft'?'انتهت':E(m.time||'')}</div><div class="mm"><span>${crest(m.h,24)}${E(m.h)}</span><span>${crest(m.a,24)}${E(m.a)}</span></div><div class="ms ${lv?'w':''}"><b>${ns?'-':m.hs}</b><b>${ns?'-':m.as}</b></div></div>`};
+const evTxt=e=>TT[e.t]+(e.x?' • '+e.x:'');
+const hero=(matches=[])=>{if(CONFIG.demo===false){const m=matches.find(x=>x.st==='live')||matches.find(x=>x.st==='ns')||matches.find(x=>x.st==='ft');if(!m)return`<div class="hero"><div class="hr"><small>مباريات اليوم</small><i class="lv" style="background:#0007">المصدر</i></div><p class="hn">لا توجد مباراة متاحة من مصدر البيانات لهذا اليوم.</p></div>`;const status=m.st==='live'?(m.mt||'مباشر'):m.st==='ft'?'انتهت':(m.time||'قادمة');return`<div class="hero" data-ov="m:${E(m.id)}"><div class="hr"><small>${E(lgn(m.lg)||m.lg||'')}</small><i class="lv lvmin">${E(status)}</i></div><div class="hr hm"><div>${crest(m.h,54)}${E(m.h)}</div><div class="sc">${m.st==='ns'?'VS':m.hs+' : '+m.as}</div><div>${crest(m.a,54)}${E(m.a)}</div></div><p class="hn">${m.st==='live'?'مباراة مباشرة':m.st==='ft'?'نتيجة المباراة النهائية':'المباراة القادمة'}</p></div>`}const L=liveM(),lv=L.st==='live',e=LIVE.ev[LIVE.ev.length-1];return`<div class="hero" data-ov="m:L"><div class="hr"><small>${lgn('egy')} • الجولة 15</small>${lv?`<i class="lv lvmin">${mtx()}</i>`:`<i class="lv" style="background:#0007">${L.st==='ns'?'تجريبي 21:00':'انتهت'}</i>`}</div><div class="hr hm"><div>${crest(L.h,54)}${L.h}</div><div class="sc">${L.st==='ns'?'VS':L.hs+' : '+L.as}</div><div>${crest(L.a,54)}${L.a}</div></div><p class="hn">${e?e.m+"' "+evTxt(e):'اضغط لتفاصيل المباراة وتجربة الأصوات والإشعارات'}</p></div>`};
+const gr=n=>`linear-gradient(135deg,hsl(${hs(n)%360} 55% 24%),#0a0a0a)`;
+const ncard=(n,i)=>`<div class="nc" data-ov="a:${i}" style="background-image:${/^https:/.test(n.img||'')?`url('${E(n.img)}')`:gr(n.title)}"><span class="tg2">${E(n.tag||'خبر')}</span><b>${E(n.title)}</b><small class="mu">${E(n.source||'')} • ${E(n.time||'')}</small></div>`;
+const tile=(l,v)=>`<div class="tl2"><small>${l}</small><b>${v}</b></div>`;
+const PG={
+async home(){const[s,n,ms]=await Promise.all([gSc(CUR),gN(CUR),gM(TODAY),gS(CUR)]);const fv=ST.fav.length?`<h2 class="sc">فرقي</h2><div class="hs">${ST.fav.slice(0,12).map(f=>`<div data-ov="t:${E(f)}" style="text-align:center;font-size:12px;width:64px;cursor:pointer">${crest(f,52)}<div>${E(f)}</div></div>`).join('')}</div>`:'';
+return chips()+`<div style="margin-top:14px">${hero(ms)}</div>${fv}<h2 class="sc">مباريات اليوم<a data-go="matches">عرض الكل</a></h2><div class="cd">${ms.slice(0,4).map(mr).join('')}</div><h2 class="sc">أبرز الأخبار<a data-ov="N:">عرض الكل</a></h2>${n.length?`<div class="hs">${n.map(ncard).join('')}</div>`:EMPTY}<h2 class="sc">ترتيب الهدافين<a data-go="table" data-tab2="s">عرض الكل</a></h2>${s.length?`<div class="hs">${s.map((p,i)=>`<div class="cd pc" data-ov="p:${E(p.name)}|${E(p.team)}|${p.goals}|${p.assists}"><span class="rkb">#${i+1}</span>${crest(p.name,56)}<b>${E(p.name)}</b><small>${E(p.team)}</small><span class="g">${p.goals}</span></div>`).join('')}</div>`:EMPTY}`},
+async matches(){const d=new Date(TODAY);d.setDate(d.getDate()+DATE);let ms=await gM(d);if(FLT!=='all')ms=ms.filter(m=>m.st===FLT);const g={};ms.forEach(m=>(g[m.lg]=g[m.lg]||[]).push(m));
+const days=[-3,-2,-1,0,1,2,3].map(i=>{const x=new Date(TODAY);x.setDate(x.getDate()+i);return`<button class="${DATE===i?'on':''}" data-dt="${i}"><small>${x.toLocaleDateString('ar-EG-u-nu-latn',{weekday:'short'})}</small><b>${x.getDate()}</b></button>`}).join('');
+return`<div class="ds">${days}</div><div class="sg" style="margin:12px 0">${[['all','الكل'],['live','مباشر'],['ft','انتهت'],['ns','القادمة']].map(x=>`<button data-flt="${x[0]}" class="${FLT===x[0]?'on':''}">${x[1]}</button>`).join('')}</div>${Object.keys(g).map(l=>`<div class="lh">${lgn(l)||l}</div><div class="cd">${g[l].map(mr).join('')}</div>`).join('')||(CONFIG.demo===false?'<p class="mu c">لا توجد مباريات من المصدر في التاريخ أو التصنيف المحدد.</p>':EMPTY)}`},
+async live(){const L=liveM(),run=L.st==='live';return`${hero()}<button class="bt" style="margin:16px 0" data-act="sim">${LIVE.ph==='ns'||LIVE.ph==='ft'?'ابدأ بث تجريبي للمباراة':'إعادة البث التجريبي'}</button><p class="mu" style="font-size:13px;margin:0 0 6px">البث التجريبي يعرض كل أحداث المباراة (الأهداف والبطاقات والتبديل وصافرات البداية والأشواط والنهاية) بأصواتها وإشعاراتها. اربط مصدر المباريات ليحل محله البث الحقيقي.</p><h2 class="sc">أحداث المباراة</h2>${LIVE.ev.length?`<div class="cd">${LIVE.ev.slice().reverse().map(evRow).join('')}</div>`:'<p class="mu c">اضغط «ابدأ بث تجريبي» لتبدأ الأحداث</p>'}`},
+async table(){const lg=CUR,[t,s]=await Promise.all([gS(lg),gSc(lg)]);const seg=`<div class="sg" style="margin:12px 0">${[['t','الجدول'],['s','الهدافون'],['a','الصناع'],['n','أرقام']].map(x=>`<button data-seg="${x[0]}" class="${TAB===x[0]?'on':''}">${x[1]}</button>`).join('')}</div>`;let b='';
+if(TAB==='t'&&!t.length)b=(lg==='egy'?'<div class="cd c mu">لم يتوفر حتى الآن مصدر بيانات مجاني بلا مفتاح تم التحقق من صلاحيته للدوري المصري داخل التطبيق. لذلك لا نعرض جدولًا أو أرقامًا غير مؤكدة.</div>':EMPTY);else if((TAB==='s'||TAB==='a')&&!s.length)b='<div class="cd c mu">لا تتوفر قائمة هدافين أو صناع لعب موثقة من المصدر لهذه البطولة حاليًا.</div>';else if(TAB==='n'&&!t.length)b='<div class="cd c mu">لا تتوفر بيانات ترتيب كافية لحساب إحصائيات البطولة من المصدر الحالي.</div>';else if(TAB==='t')b=`<div class="cd"><div class="tr h"><span>#</span><span style="text-align:start">الفريق</span><span>لعب</span><span>فارق</span><span>نقاط</span></div>${t.map((x,i)=>`<div class="tr ${i<3?'a':i>=t.length-2&&t.length>5?'r':''}" data-ov="t:${E(x.name)}"><span>${i+1}</span><span class="tn">${crest(x.name,28)}<span>${E(x.name)}<span class="fd">${(x.form||'').split('').map(c=>`<i class="${c}"></i>`).join('')}</span></span></span><span>${x.p}</span><span>${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</span><b>${x.pts}</b></div>`).join('')}</div>`;
+else if(TAB==='s'||TAB==='a'){const k=TAB==='s'?'goals':'assists',l=s.slice().sort((a,b)=>b[k]-a[k]),mx=l[0]?l[0][k]||1:1;b=`<div class="cd">${l.map((p,i)=>`<div class="sr" data-ov="p:${E(p.name)}|${E(p.team)}|${p.goals}|${p.assists}"><b style="color:var(--mu);width:20px">${i+1}</b>${crest(p.name,38)}<div style="flex:1"><b>${E(p.name)}</b><small style="margin:0;display:block">${E(p.team)}</small><div class="bar"><i style="width:${p[k]/mx*100}%"></i></div></div><b style="font-size:22px;color:var(--lm)">${p[k]}</b></div>`).join('')}</div>`}
+else{const gf=t.reduce((a,x)=>a+x.gf,0),m=t.reduce((a,x)=>a+x.p,0)/2,at=t.slice().sort((a,b)=>b.gf-a.gf)[0],df=t.slice().sort((a,b)=>a.ga-b.ga)[0];b=`<div class="g2">${tile('المباريات',m)}${tile('الأهداف',gf)}${tile('متوسط الأهداف',(gf/m).toFixed(2))}${tile('أقوى هجوم',at.gf+' • '+E(at.name))}${tile('أقوى دفاع',df.ga+' • '+E(df.name))}${tile('الفرق',t.length)}</div>`}
+return chips()+seg+(t.some(x=>x.source==='OpenLigaDB')?'<p class="mu c" style="font-size:11px;margin:8px 0">مصدر بيانات جدول الدوري الألماني: OpenLigaDB</p>':'')+b},
+async more(){return`<div class="cd" style="margin-top:6px;display:flex;align-items:center;gap:14px;padding:12px"><div style="width:76px;height:76px;border-radius:20px;background:var(--logo) center/cover;border:1px solid var(--ln)"></div><div><b style="font-size:19px">كورة X</b><div class="mu" style="font-size:13px">الإصدار 1.0 • بدون تسجيل دخول</div></div></div><div class="g3" style="margin-top:12px">${[['f:','المفضلة','star'],['n:','الإشعارات','bell'],['s:','البحث','search']].map(x=>`<div class="tl2" data-ov="${x[0]}" style="cursor:pointer;display:grid;justify-items:center;gap:4px;color:var(--lm)">${ic(x[2])}<b style="font-size:13px;color:var(--ink)">${x[1]}</b></div>`).join('')}</div><h2 class="sc">الأصوات والإشعارات</h2><div class="cd">${[['snd','المؤثرات الصوتية'],['ng','إشعارات الأهداف'],['nc','البطاقات والتبديلات'],['np','بداية الأشواط ونهاية المباراة'],['nn','الأخبار العاجلة']].map(x=>`<label class="sw"><span>${x[1]}</span><input type="checkbox" data-k="${x[0]}" ${ST[x[0]]?'checked':''}><i></i></label>`).join('')}<div style="padding:14px 0"><span>مستوى الصوت</span><input type="range" min="0" max="1" step=".05" value="${ST.vol}" data-k="vol"></div></div><h3>جرّب المؤثرات</h3><div class="hs" style="flex-wrap:wrap;overflow:visible;margin:0;padding:0">${SNL.map(x=>`<button class="pl" data-snd="${x[0]}">${x[1]}</button>`).join('')}</div><button class="bt g" style="margin-top:14px" data-act="ntest">إرسال إشعار تجريبي</button><h2 class="sc">الدوريات المعروضة</h2><div class="hs" style="flex-wrap:wrap;overflow:visible;margin:0;padding:0">${LGS.map(l=>`<button class="pl ${ST.hid.includes(l[0])?'':'on'}" data-hid="${l[0]}">${l[1]}</button>`).join('')}</div><h2 class="sc">عام</h2><div class="cd"><div class="sw"><span>المنطقة الزمنية</span><b>${E(Intl.DateTimeFormat().resolvedOptions().timeZone)}</b></div><div class="sw" data-act="resp" style="cursor:pointer"><span>إعادة عرض شاشة البداية</span>${ic('back')}</div></div>`}};
+const EMPTY='<div class="cd c mu">لا توجد بيانات متاحة من المصدر لهذا الدوري أو القسم حاليًا.</div>';
+const evRow=e=>`<div class="ev ${['ko','ht','sh','ft'].includes(e.t)?'n':e.s||'n'}"><em>${e.m}'</em><span>${EI[e.t]}</span><b>${E(e.x||TT[e.t])}</b></div>`;
+function evFor(m){if(m.id==='L')return CONFIG.demo===false?[]:LIVE.ev;if(CONFIG.demo===false||m.st==='ns')return[];const r=rnd(hs(m.id));return[...Array(m.hs).fill('h'),...Array(m.as).fill('a')].map(s=>({m:1+(r()*89|0),t:'g',s,x:POOL[r()*POOL.length|0]})).sort((a,b)=>a.m-b.m)}
+const F=[[50,5],[14,17],[38,15],[62,15],[86,17],[28,30],[50,27],[72,30],[20,42],[50,45],[80,42]];
+const OVR={
+m(){const m=OV.id==='L'?liveM():MC[OV.id];if(!m)return['','','<p class="mu c">غير متاح</p>'];const ns=m.st==='ns',tab=OV.tab,ev=evFor(m),r=rnd(hs(m.id+'x'));
+const head=`<div class="mh"><div class="hr"><small>${lgn(m.lg)}</small>${m.st==='live'?`<i class="lv lvmin">${E(m.mt||m.min+"'")}</i>`:`<i class="lv" style="background:#0007">${ns?E(m.time):'انتهت'}</i>`}</div><div class="hr hm"><div>${crest(m.h,56)}${E(m.h)}</div><div class="sc">${ns?'VS':m.hs+' : '+m.as}</div><div>${crest(m.a,56)}${E(m.a)}</div></div></div><div class="sg" style="margin:14px 0">${[['s','ملخص'],['t','إحصائيات'],['l','التشكيلة']].map(x=>`<button data-tab="${x[0]}" class="${tab===x[0]?'on':''}">${x[1]}</button>`).join('')}</div>`;let c;
+if(tab==='s')c=ev.length?`<div class="cd">${ev.slice().reverse().map(evRow).join('')}</div>`:(CONFIG.demo===false?'<p class="mu c">تفاصيل أحداث المباراة غير متاحة من مصدر البيانات الحالي.</p>':'<p class="mu c">لا توجد أحداث بعد</p>');
+else if(tab==='t'){if(ns)c=CONFIG.demo===false?'<p class="mu c">لا تتوفر إحصائيات تفصيلية موثقة لهذه المباراة حاليًا.</p>':'<p class="mu c">تظهر الإحصائيات بعد انطلاق المباراة</p>';else{const p=40+(r()*20|0);c=`<div class="cd">${[['الاستحواذ %',p,100-p]].concat(['التسديدات','على المرمى','الركنيات','الأخطاء','البطاقات'].map(l=>[l,1+(r()*10|0),1+(r()*10|0)])).map(x=>`<div class="sbr"><div class="sv"><b>${x[1]}</b><span>${x[0]}</span><b>${x[2]}</b></div><div class="bar"><i style="width:${x[1]/(x[1]+x[2])*100}%"></i></div></div>`).join('')}</div>`}}
+else c=`<div class="pitch">${F.map(([x,y],i)=>`<b style="left:${x}%;top:${100-y}%">${i+1}</b><b class="a" style="left:${x}%;top:${y}%">${i+1}</b>`).join('')}</div>`;
+return['المباراة','',head+c]},
+p(){const[n,tm,g]=OV.id.split('|'),r=rnd(hs(n)),no=7+(r()*20|0),y=2018+(r()*3|0);return[E(n),'',`<div class="ph"><div class="big">${E(n)}</div>${tm?`<div class="tm">${crest(tm,30)}${E(tm)}</div>`:''}<i class="no">${no}</i><span class="pos">مهاجم</span></div><div class="g3" style="margin-top:12px">${tile('العمر',22+(r()*13|0))}${tile('المباريات',10+(r()*5|0))}${tile('الأهداف',g||4+(r()*10|0))}</div><h3>الانضباط</h3><div class="g4">${tile('فاولات',8+(r()*20|0))}${tile('عليه',6+(r()*15|0))}${tile('🟨',r()*5|0)}${tile('🟥',r()*2|0)}</div><h3>البطولات</h3><div class="hs">${[['دوري الأبطال','🏆',1+(r()*3|0)],['الدوري','🥇',1+(r()*5|0)],['الكأس','🏅',1+(r()*3|0)]].map(x=>`<div class="cd tro"><span>${x[1]}</span><b style="font-size:22px;display:block">${x[2]}</b><small>${x[0]}</small></div>`).join('')}</div><h3>المسيرة</h3><div class="cd">${[0,1,2].map(i=>{const c=ALL()[(r()*40|0)%ALL().length].name;return`<div class="car"><small class="mu">${y+i*3}–${y+i*3+3}</small><div><b>${E(c)}</b><i style="width:${90-i*25}%"></i></div></div>`}).join('')}</div>`]},
+t(){const n=OV.id,x=ALL().find(z=>z.name===n)||{name:n,p:14,w:7,d:3,l:4,gf:20,ga:14,pts:24,form:'WDLWW'},f=ST.fav.includes(n);return[E(n),`<button class="ib" data-fav="${E(n)}" style="color:${f?'var(--lm)':'inherit'}">${ic('star',22,f?'currentColor':'none')}</button>`,`<div class="ph" style="min-height:0"><div class="tm" style="margin:0">${crest(n,64)}<div><b style="font-size:26px">${E(n)}</b><div class="fd" style="gap:5px">${x.form.split('').map(c=>`<i class="${c}" style="width:11px;height:11px"></i>`).join('')}</div></div></div></div><div class="g2" style="margin-top:12px">${tile('النقاط',x.pts)}${tile('ف / ت / خ',`${x.w}/${x.d}/${x.l}`)}${tile('أهداف له',x.gf)}${tile('أهداف عليه',x.ga)}${tile('متوسط التسجيل',(x.gf/x.p).toFixed(2))}${tile('نسبة الفوز',Math.round(x.w/x.p*100)+'%')}</div>`]},
+a(){const n=NC[+OV.id];if(!n)return['','','<p class="mu c">غير متاح</p>'];return['الخبر',`<button class="ib" data-share="${E(n.title)}">${ic('share',20)}</button>`,`<div class="art" style="background-image:${/^https:/.test(n.img||'')?`url('${E(n.img)}')`:gr(n.title)}"><span class="tg2">${E(n.tag||'خبر')}</span><h1>${E(n.title)}</h1></div><p class="mu">${E(n.time||'')}</p>${E(n.body||n.desc).split('\n').filter(Boolean).map(p=>`<p style="line-height:1.9">${p}</p>`).join('')}<div class="cd"><small class="mu">الناشر: ${E(n.source||'')}</small>${n.url?`<a class="bt g" style="display:block;text-align:center;text-decoration:none;margin-top:12px" href="${E(n.url)}" rel="noopener noreferrer">قراءة الخبر لدى المصدر الأصلي ↗</a>`:''}</div>`]},
+N(){return['الأخبار','',NC.map((n,i)=>`<div class="nr" data-ov="a:${i}"><div class="th" style="background-image:${/^https:/.test(n.img||'')?`url('${E(n.img)}')`:gr(n.title)}"></div><div><b>${E(n.title)}</b><small>${E(n.tag||'')} • ${E(n.time||'')}</small></div></div>`).join('')||EMPTY]},
+n(){UNR=0;bd();return['الإشعارات','',NT.length?`<div class="cd">${NT.map(x=>`<div class="sr" style="cursor:default"><span style="font-size:22px">🔔</span><div><b>${E(x.t)}</b><small style="margin:0;display:block">${E(x.b)}</small></div></div>`).join('')}</div>`:'<p class="mu c">لا توجد إشعارات بعد. ابدأ البث التجريبي من زر ⚡</p>']},
+f(){const all=[...new Set(ALL().map(x=>x.name))];return[OV.id==='ob'?'اختر فرقك المفضلة':'المفضلة','',`<div class="fg">${all.map(n=>`<div class="${ST.fav.includes(n)?'on':''}" data-fav="${E(n)}">${crest(n,56)}<span>${E(n)}</span></div>`).join('')}</div><button class="bt" style="margin-top:22px" data-x>تم</button>`]},
+s(){return['البحث','',`<input id="q" class="sb2" placeholder="ابحث عن فريق أو لاعب أو مباراة" value="${E(OV.q||'')}"><div class="hs" style="margin-bottom:6px">${[['all','الكل'],['t','الفرق'],['p','اللاعبون'],['m','المباريات']].map(x=>`<button class="pl ${(OV.f||'all')===x[0]?'on':''}" data-sf="${x[0]}">${x[1]}</button>`).join('')}</div><div id="sr"></div>`]}};
+function sres(){const q=(OV.q||'').trim(),f=OV.f||'all',o=[];if(!q){$('#sr').innerHTML='<p class="mu c">اكتب اسم فريق أو لاعب أو مباراة</p>';return}
+if(f==='all'||f==='t')ALL().filter(x=>x.name.includes(q)).forEach(x=>o.push(`<div class="sr" data-ov="t:${E(x.name)}">${crest(x.name,34)}<b>${E(x.name)}</b><small>فريق • ${lgn(x.lg)}</small></div>`));
+if(f==='all'||f==='p')(CONFIG.demo===false?SCACHE:POOL.map(name=>({name,team:''}))).filter(x=>x.name.includes(q)).forEach(x=>o.push(`<div class="sr" data-ov="p:${E(x.name)}|${E(x.team||'')}">${pav(x.name,34,x.team)}<b>${E(x.name)}</b><small>لاعب</small></div>`));
+if(f==='all'||f==='m')Object.values(MC).filter(m=>(m.h+m.a).includes(q)).slice(0,6).forEach(m=>o.push(`<div class="sr" data-ov="m:${E(m.id)}">${crest(m.h,34)}<b>${E(m.h)} × ${E(m.a)}</b><small>مباراة</small></div>`));$('#sr').innerHTML=o.join('')||'<p class="mu c">لا توجد نتائج</p>'}
+function ovr(){const o=$('#ov');if(!OV){o.classList.remove('on');return}const[t,r,b]=OVR[OV.t]();o.innerHTML=`<div class="oh"><button class="ib" data-x aria-label="رجوع">${ic('back')}</button><b>${t}</b><span>${r||''}</span></div><div class="ob">${b}</div>`;o.classList.add('on');if(OV.t==='s'){sres();if(!OV.q)$('#q').focus()}}
+function op(v){const i=v.indexOf(':'),t=v.slice(0,i),id=v.slice(i+1);if(OV)OVS.push(OV);OV={t,id,tab:'s'};$('#ov').scrollTop=0;ovr()}
+function cl(){OV=OVS.pop()||null;ovr();if(!OV&&P==='home')render()}
+async function render(){const k=++RT;const h=await PG[P]();if(k!==RT)return;$('#pg').innerHTML=h;$('#nv').innerHTML=NAV.map(([k,l,i])=>k==='live'?`<button class="ctr" data-go="live" aria-label="مباشر">${ic('bolt',28,'currentColor')}</button>`:`<button class="${P===k?'on':''}" data-go="${k}">${ic(i)}<span>${l}</span></button>`).join('')}
+function refresh(){if(OV){if(OV.t==='m')ovr()}else if(['home','matches','live'].includes(P))render()}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-go],[data-ov],[data-x],[data-lg],[data-tab],[data-seg],[data-dt],[data-fav],[data-hid],[data-snd],[data-act],[data-flt],[data-sf],[data-share]');if(!t)return;const d=t.dataset;
+if(d.x!==undefined)cl();else if(d.ov!==undefined)op(d.ov);else if(d.go){if(d.tab2)TAB=d.tab2;P=d.go;scrollTo(0,0);render()}else if(d.lg){CUR=d.lg;render()}else if(d.tab){OV.tab=d.tab;ovr()}else if(d.seg){TAB=d.seg;render()}else if(d.dt!==undefined){DATE=+d.dt;render()}else if(d.flt){FLT=d.flt;render()}
+else if(d.fav){const i=ST.fav.indexOf(d.fav);i<0?ST.fav.push(d.fav):ST.fav.splice(i,1);save();const s=$('#ov').scrollTop;ovr();$('#ov').scrollTop=s}
+else if(d.hid){const i=ST.hid.indexOf(d.hid);i<0?ST.hid.push(d.hid):ST.hid.splice(i,1);if(ST.hid.includes(CUR))CUR=vis()[0]?vis()[0][0]:'egy';save();render()}
+else if(d.snd)play(d.snd);else if(d.sf){OV.f=d.sf;ovr()}else if(d.share)navigator.share&&navigator.share({title:d.share}).catch(()=>{});
+else if(d.act==='sim'&&CONFIG.demo!==false)startLive();else if(d.act==='ntest'){play('notif');simple('إشعار تجريبي','هكذا ستظهر الإشعارات داخل التطبيق')}
+else if(d.act==='start'){$('#sp').classList.remove('on');ST.onb=1;save();op('f:ob')}else if(d.act==='skip'){$('#sp').classList.remove('on');ST.onb=1;save()}else if(d.act==='resp')$('#sp').classList.add('on')});
+document.addEventListener('input',e=>{const t=e.target;if(t.dataset.k){ST[t.dataset.k]=t.type==='range'?+t.value:+t.checked;save()}else if(t.id==='q'){OV.q=t.value;sres()}});
+$('#b1').innerHTML=ic('search');$('#b2').insertAdjacentHTML('afterbegin',ic('bell'));
+if(!ST.onb)$('#sp').classList.add('on');
+render();
+</script>
+<script>/* ===== v3: ملحقات التطبيق ===== */
+Object.assign(CONFIG,window.KXCFG||{});_A=null;
+if(ST.vib===undefined)ST.vib=1;
+document.body.classList.toggle('nodemo',CONFIG.demo===false);
+const LANGS=[['ar','العربية','🇸🇦'],['en','English','🇺🇸'],['fr','Français','🇫🇷'],['es','Español','🇪🇸']];
+let LANG=ST.lang||'ar';
+LGS.length=0;LGS.push(['eng','الدوري الإنجليزي','l'],['esp','الدوري الإسباني','l'],['ita','الدوري الإيطالي','l'],['ger','الدوري الألماني','l'],['fra','الدوري الفرنسي','l'],['egy','الدوري المصري','l'],['ksa','دوري روشن','l'],['ned','الدوري الهولندي','l'],['por','الدوري البرتغالي','l'],['tur','الدوري التركي','l'],['bra','الدوري البرازيلي','l'],['arg','الدوري الأرجنتيني','l'],['usa','الدوري الأمريكي','l'],['mex','الدوري المكسيكي','l'],['jpn','الدوري الياباني','l'],['ucl','دوري أبطال أوروبا','t'],['uel','الدوري الأوروبي','t'],['lib','كوبا ليبرتادوريس','t'],['wc','كأس العالم','t'],['afc','كأس أمم أفريقيا','t']);
+Object.assign(TM,{fra:'باريس سان جيرمان,مارسيليا,موناكو,ليون,ليل,نيس,رين,لانس',ucl:'ريال مدريد,مان سيتي,بايرن,إنتر,برشلونة,باريس سان جيرمان,ليفربول,آرسنال',wc:'البرازيل,الأرجنتين,فرنسا,إنجلترا,إسبانيا,ألمانيا,المغرب,مصر',afc:'مصر,المغرب,السنغال,الجزائر,نيجيريا,الكاميرون,تونس,ساحل العاج'});
+CUR='eng';
+const CLUBS=['ريال مدريد','برشلونة','مان سيتي','ليفربول','بايرن','باريس سان جيرمان','الأهلي','الزمالك','الهلال','النصر','يوفنتوس','ميلان'];
+const FLAGS=['🇪🇬','🇸🇦','🇧🇷','🇦🇷','🇫🇷','🇵🇹','🇳🇴','🇬🇧','🇪🇸','🇲🇦'];
+const NM='أحمد حجازي,محمد هاني,ياسر إبراهيم,رامي ربيعة,علي معلول,مروان عطية,عمرو السولية,أكرم توفيق,ناصر ماهر,محمد شريف,وسام أبو علي,محمود كهربا,حسين الشحات,أحمد فتوح,محمد عواد,خالد صبحي,شيكابالا,يوسف أوباما,مصطفى فتحي,عبد الله السعيد,أحمد زيزو,محمد عبد المنعم,مدحت شلبي,إمام عاشور'.split(',');
+const AST={12:'إمام عاشور',31:'ناصر ماهر',67:'مروان عطية',83:'محمد شريف'};
+/* ===== الترجمة ===== */
+const D={},RX=[[/منذ (\d+) ساعة/g,['$1h ago','il y a $1 h','hace $1 h']],[/الجولة (\d+)/g,['Round $1','Journée $1','Jornada $1']],[/تمريرة: /g,['Assist: ','Passe : ','Asistencia: ']],[/حتى /g,['until ','jusqu\'à ','hasta ']]];
+`ملعبي|Home|Accueil|Inicio
+الجولة|Matches|Matchs|Partidos
+الأخبار|News|Actus|Noticias
+الانتقالات|Transfers|Transferts|Fichajes
+الترتيب|Table|Classement|Clasificación
+المزيد|More|Plus|Más
+مباراة|Match|Match|Partido
+مباريات اليوم|Today's matches|Matchs du jour|Partidos de hoy
+أبرز الأخبار|Top news|À la une|Destacadas
+ترتيب الهدافين|Top scorers|Meilleurs buteurs|Goleadores
+عرض الكل|See all|Voir tout|Ver todo
+فرقي|My teams|Mes équipes|Mis equipos
+انتهت|Full time|Terminé|Finalizado
+الكل|All|Tous|Todos
+مباشر|Live|En direct|En vivo
+القادمة|Upcoming|À venir|Próximos
+الجدول|Table|Tableau|Tabla
+الهدافون|Scorers|Buteurs|Goleadores
+الصناع|Assists|Passeurs|Asistentes
+أرقام|Stats|Stats|Datos
+الفريق|Team|Équipe|Equipo
+لعب|P|J|PJ
+فارق|GD|Diff|DG
+نقاط|Pts|Pts|Pts
+المباراة|Match|Match|Partido
+ملخص|Summary|Résumé|Resumen
+إحصائيات|Stats|Stats|Estadísticas
+التشكيلة|Lineups|Compositions|Alineaciones
+الاستحواذ %|Possession %|Possession %|Posesión %
+التسديدات|Shots|Tirs|Tiros
+على المرمى|On target|Cadrés|A puerta
+الركنيات|Corners|Corners|Córners
+الأخطاء|Fouls|Fautes|Faltas
+البطاقات|Cards|Cartons|Tarjetas
+لا توجد أحداث بعد|No events yet|Aucun événement|Sin eventos aún
+انطلقت المباراة|Kick-off|Coup d'envoi|Inicio del partido
+هدف! ⚽|Goal! ⚽|But ! ⚽|¡Gol! ⚽
+بطاقة صفراء|Yellow card|Carton jaune|Tarjeta amarilla
+بطاقة حمراء|Red card|Carton rouge|Tarjeta roja
+تبديل|Substitution|Remplacement|Cambio
+تقنية الفيديو|VAR|VAR|VAR
+نهاية الشوط الأول|Half-time|Mi-temps|Descanso
+بدأ الشوط الثاني|Second half|Seconde période|Segunda parte
+صافرة النهاية|Full time|Coup de sifflet final|Final del partido
+استراحة|Break|Pause|Descanso
+الفرق|Teams|Équipes|Equipos
+اللاعبون|Players|Joueurs|Jugadores
+المباريات|Matches|Matchs|Partidos
+البحث|Search|Recherche|Buscar
+المفضلة|Favorites|Favoris|Favoritos
+الإشعارات|Notifications|Notifications|Notificaciones
+اللغة|Language|Langue|Idioma
+تم|Done|OK|Listo
+الأصوات والإشعارات|Sounds & notifications|Sons et notifications|Sonidos y notificaciones
+المؤثرات الصوتية|Sound effects|Effets sonores|Efectos de sonido
+إشعارات الأهداف|Goal alerts|Alertes de buts|Alertas de gol
+البطاقات والتبديلات|Cards & substitutions|Cartons et remplacements|Tarjetas y cambios
+بداية الأشواط ونهاية المباراة|Kick-off, half-time & full-time|Coup d'envoi, mi-temps et fin|Inicio, descanso y final
+الأخبار العاجلة|Breaking news|Dernières infos|Última hora
+إشعارات النظام|System notifications|Notifications système|Notificaciones del sistema
+اهتزاز الإشعارات|Vibration|Vibration|Vibración
+مستوى الصوت|Volume|Volume|Volumen
+جرّب المؤثرات|Try the sounds|Tester les sons|Probar sonidos
+إرسال إشعار تجريبي|Send a test notification|Envoyer une notification test|Enviar notificación de prueba
+الدوريات المعروضة|Visible leagues|Ligues affichées|Ligas visibles
+عام|General|Général|General
+المنطقة الزمنية|Time zone|Fuseau horaire|Zona horaria
+إعادة عرض شاشة البداية|Replay intro|Revoir l'intro|Ver la intro
+قاموس الكرة|Football glossary|Lexique du foot|Glosario del fútbol
+هدف|Goal|But|Gol
+بداية المباراة|Kick-off|Coup d'envoi|Inicio
+بداية الشوط الثاني|Second half start|Début de seconde période|Inicio segunda parte
+نهاية المباراة|Full time|Fin du match|Final
+إشعار|Notification|Notification|Notificación
+خبر عاجل|Breaking news|Dernière minute|Última hora
+بطاقة|Card|Carton|Tarjeta
+ركلة جزاء|Penalty|Penalty|Penalti
+تشجيع الجماهير|Crowd cheer|Ambiance|Afición
+الدوريات|Leagues|Ligues|Ligas
+البطولات|Tournaments|Tournois|Torneos
+الأندية|Clubs|Clubs|Clubes
+الأندية والمنتخبات|Clubs & national teams|Clubs et sélections|Clubes y selecciones
+تخصيص عرض الأخبار|Customize news|Personnaliser|Personalizar noticias
+آخر الأخبار|Latest news|Dernières actus|Últimas noticias
+هل تعلم؟|Did you know?|Le saviez-vous ?|¿Sabías que?
+بيانات توضيحية|Demo data|Données démo|Datos demo
+انتقال|Transfer|Transfert|Fichaje
+إعارة|Loan|Prêt|Cesión
+انتقال حر|Free transfer|Transfert libre|Libre
+تجديد|Renewal|Prolongation|Renovación
+الأعلى قيمة|Highest fee|Plus cher|Mayor coste
+الأحدث|Latest|Récents|Recientes
+أبرز الانتقالات|Top transfers|Top transferts|Fichajes top
+آخر الانتقالات|Latest transfers|Derniers transferts|Últimos fichajes
+مؤكد|Confirmed|Confirmé|Confirmado
+غير مؤكد|Unconfirmed|Non confirmé|No confirmado
+عرض التفاصيل|Show details|Voir détails|Ver detalles
+متابعة المباراة|Follow match|Suivre le match|Seguir partido
+مشاركة|Share|Partager|Compartir
+توقع تجريبي|Demo prediction|Prédiction démo|Predicción demo
+تعادل|Draw|Nul|Empate
+يتم الحديث عنه الآن|Trending now|Tendance|Tendencia
+أخبار الكرة|Football news|Actu foot|Noticias fútbol
+الانضباط|Discipline|Discipline|Disciplina
+فاولات مكتسبة|Fouls won|Fautes subies|Faltas recibidas
+فاولات مرتكبة|Fouls committed|Fautes commises|Faltas cometidas
+بطاقات صفراء|Yellow cards|Cartons jaunes|Amarillas
+بطاقات حمراء|Red cards|Cartons rouges|Rojas
+الألقاب|Trophies|Titres|Títulos
+المسيرة|History|Carrière|Trayectoria
+العمر|Age|Âge|Edad
+الأهداف|Goals|Buts|Goles
+مهاجم|Forward|Attaquant|Delantero
+تسديدات على المرمى|Shots on target|Tirs cadrés|Tiros a puerta
+الأهداف المسجلة|Goals scored|Buts marqués|Goles marcados
+أكتوبر|Oct|Oct|Oct
+اختر لغتك|Choose your language|Choisissez la langue|Elige tu idioma
+العربية هي اللغة الأساسية، ويمكنك التغيير لاحقاً|Arabic is the default, you can change it later|L'arabe est la langue par défaut, modifiable plus tard|El árabe es el idioma principal, puedes cambiarlo luego
+التالي|Next|Suivant|Siguiente
+متابعة|Continue|Continuer|Continuar
+تخطي|Skip|Passer|Omitir
+ابدأ الآن|Get started|Commencer|Empezar
+عالم الكرة بين يديك|The football world in your hands|Le monde du foot dans votre poche|El mundo del fútbol en tus manos
+تابع كل مباراة|Follow every match|Suivez chaque match|Sigue cada partido
+نتائج لحظية وترتيب أشهر الدوريات والبطولات في مكان واحد|Live scores and standings for top leagues in one place|Scores en direct et classements des grands championnats|Resultados y clasificaciones de las grandes ligas en un lugar
+إشعارات الأهداف بصورة اللاعب|Goal alerts with the scorer's photo|Alertes de buts avec la photo du buteur|Alertas de gol con la foto del goleador
+أصوات واقعية وإشعارات ذكية لحظة بلحظة|Realistic sounds and smart alerts, moment by moment|Sons réalistes et alertes intelligentes en direct|Sonidos realistas y alertas inteligentes al instante
+أخبار وانتقالات أولاً بأول|News & transfers as they happen|Actus et transferts en temps réel|Noticias y fichajes al momento
+تابع فريقك المفضل وأحدث صفقات اللاعبين|Follow your team and the latest signings|Suivez votre équipe et les derniers transferts|Sigue a tu equipo y los últimos fichajes
+مسح الكل|Clear all|Tout effacer|Borrar todo
+أهداف|Goals|Buts|Goles
+أخبار|News|Actus|Noticias
+اختر فرقك المفضلة|Pick your favorite teams|Choisissez vos équipes|Elige tus equipos
+لا توجد مباريات مباشرة الآن|No live matches now|Aucun match en direct|No hay partidos en vivo
+ابحث عن فريق أو لاعب أو مباراة|Search a team, player or match|Équipe, joueur ou match|Equipo, jugador o partido
+متابعة المباراة|Follow match|Suivre le match|Seguir partido`.split('\n').forEach(l=>{const a=l.split('|');D[a[0]]=a.slice(1)});
+const EN={};
+[['egy','Al Ahly,Zamalek,Pyramids,Ceramica,Al Masry,Pico,Ismaily,Al Ittihad'],['ksa','Al Hilal,Al Nassr,Al Ittihad,Al Ahli,Al Shabab,Al Fateh,Al Taawoun,Al Raed'],['eng','Liverpool,Man City,Arsenal,Chelsea,Tottenham,Man United,Newcastle,Aston Villa'],['esp','Real Madrid,Barcelona,Atletico,Sevilla,Villarreal,Valencia,Betis,Real Sociedad'],['ita','Inter,Milan,Juventus,Napoli,Roma,Lazio,Atalanta,Fiorentina'],['ger','Bayern,Dortmund,Leipzig,Leverkusen,Stuttgart,Frankfurt,Wolfsburg,Freiburg'],['fra','PSG,Marseille,Monaco,Lyon,Lille,Nice,Rennes,Lens'],['ucl','Real Madrid,Man City,Bayern,Inter,Barcelona,PSG,Liverpool,Arsenal'],['wc','Brazil,Argentina,France,England,Spain,Germany,Morocco,Egypt'],['afc','Egypt,Morocco,Senegal,Algeria,Nigeria,Cameroon,Tunisia,Ivory Coast']].forEach(([k,v])=>{const e=v.split(',');teams(k).forEach((a,i)=>{if(!EN[a])EN[a]=e[i]})});
+Object.entries(EN).forEach(([a,e])=>{if(!D[a])D[a]=[e,e,e]});
+'الدوري الإنجليزي|Premier League|Premier League|Premier League,الدوري الإسباني|La Liga|La Liga|La Liga,الدوري الإيطالي|Serie A|Serie A|Serie A,الدوري الألماني|Bundesliga|Bundesliga|Bundesliga,الدوري الفرنسي|Ligue 1|Ligue 1|Ligue 1,الدوري المصري|Egyptian League|Ligue égyptienne|Liga egipcia,دوري روشن|Saudi Pro League|Ligue saoudienne|Liga saudí,الدوري الهولندي|Eredivisie|Eredivisie|Eredivisie,الدوري البرتغالي|Primeira Liga|Liga portugaise|Liga portuguesa,الدوري التركي|Süper Lig|Süper Lig|Süper Lig,الدوري البرازيلي|Brasileirão|Brasileirão|Brasileirão,الدوري الأرجنتيني|Argentine League|Ligue argentine|Liga argentina,الدوري الأمريكي|MLS|MLS|MLS,الدوري المكسيكي|Liga MX|Liga MX|Liga MX,الدوري الياباني|J1 League|J1 League|J1 League,دوري أبطال أوروبا|Champions League|Ligue des champions|Liga de Campeones,الدوري الأوروبي|Europa League|Ligue Europa|Europa League,كوبا ليبرتادوريس|Copa Libertadores|Copa Libertadores|Copa Libertadores,كأس العالم|World Cup|Coupe du monde|Copa del Mundo,كأس أمم أفريقيا|AFCON|CAN|Copa Africana,محمد صلاح|Mohamed Salah|Mohamed Salah|Mohamed Salah,إيرلينج هالاند|Erling Haaland|Erling Haaland|Erling Haaland,كيليان مبابي|Kylian Mbappé|Kylian Mbappé|Kylian Mbappé,فينيسيوس|Vinícius Jr|Vinícius Jr|Vinícius Jr,وسام أبو علي|Wessam Abou Ali|Wessam Abou Ali|Wessam Abou Ali,سالم الدوسري|Salem Al-Dawsari|Salem Al-Dawsari|Salem Al-Dawsari,ميتروفيتش|Mitrovic|Mitrovic|Mitrovic,لاوتارو|Lautaro|Lautaro|Lautaro,هاري كين|Harry Kane|Harry Kane|Harry Kane,بيلينغهام|Bellingham|Bellingham|Bellingham,زيزو|Zizo|Zizo|Zizo,محمد شريف|Mohamed Sherif|Mohamed Sherif|Mohamed Sherif,أحمد فتوح|Ahmed Fatouh|Ahmed Fatouh|Ahmed Fatouh,أحمد سيد زيزو|Ahmed Sayed Zizo|Ahmed Sayed Zizo|Ahmed Sayed Zizo,محمود علاء|Mahmoud Alaa|Mahmoud Alaa|Mahmoud Alaa,حسين الشحات|Hussein El Shahat|Hussein El Shahat|Hussein El Shahat,إمام عاشور|Emam Ashour|Emam Ashour|Emam Ashour,ناصر ماهر|Nasser Maher|Nasser Maher|Nasser Maher,مروان عطية|Marwan Attia|Marwan Attia|Marwan Attia,مراجعة تسلل|Offside check|Contrôle hors-jeu|Revisión de fuera de juego'.split(',').forEach(l=>{const a=l.split('|');D[a[0]]=a.slice(1)});
+const DI={en:0,fr:1,es:2};
+function tr(root){if(LANG==='ar'||!root)return;const i=DI[LANG],w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.nodeValue.trim();if(!t)continue;const d=D[t];if(d)n.nodeValue=n.nodeValue.replace(t,d[i]);else RX.forEach(x=>{n.nodeValue=n.nodeValue.replace(x[0],x[1][i])})}const q=root.querySelector&&root.querySelector('#q');if(q&&D[q.placeholder])q.placeholder=D[q.placeholder][i]}
+function applyLang(){LANG=ST.lang||'ar';const h=document.documentElement;h.lang=LANG;h.dir=LANG==='ar'?'rtl':'ltr';render()}
+/* ===== أيقونات وصور ===== */
+Object.assign(IC,{news:'<path d="M5 4h11v16H7a2 2 0 0 1-2-2zM16 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/>',swap:'<path d="M7 7h12l-3-3M17 17H5l3 3"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/>',bookmark:'<path d="M7 4h10v16l-5-4-5 4z"/>',voice:'<path d="M4 10v4h4l5 4V6l-5 4zM16 9a4 4 0 0 1 0 6"/>'});
+function pav(n,z=56,team){const h=hs(team||n)%360,sk=['#d9a77f','#c68b64','#8d5a3c','#f0c9a4'][hs(n)%4],u=PLAYER_PHOTOS[n]||(CONFIG.photo&&CONFIG.photo(n));if(u&&/^https:/.test(u))return`<img class="pav" loading="lazy" style="width:${z}px;height:${z}px" src="${E(u)}" alt="">`;return`<svg class="pav" style="width:${z}px;height:${z}px" viewBox="0 0 100 100"><rect width="100" height="100" fill="hsl(${h} 35% 18%)"/><path d="M10 100c3-26 19-38 40-38s37 12 40 38z" fill="hsl(${h} 70% 42%)"/><path d="M38 62l12 12 12-12" fill="none" stroke="#fff" stroke-width="3" opacity=".7"/><circle cx="50" cy="38" r="17" fill="${sk}"/><path d="M33 36a17 17 0 0 1 34 0c-5-8-29-8-34 0z" fill="#181818"/></svg>`}
+/* ===== التنقل والفلاتر ===== */
+NAV.length=0;NAV.push(['home','ملعبي','home'],['more','الإعدادات','gear'],['matches','الجولة','cal'],['live','','bolt'],['news','الأخبار','news'],['transfers','الانتقالات','swap'],['table','الترتيب','list']);
+let CG='l',TRF='all',TRS='fee',NF='all',SPS=0;const CG_={l:'الدوريات',t:'البطولات',c:'الأندية'};
+const chips2=()=>`<div class="sg" style="margin-bottom:10px">${Object.entries(CG_).map(([k,v])=>`<button data-cg="${k}" class="${CG===k?'on':''}">${v}</button>`).join('')}</div>`+(CG==='c'?`<div class="hs">${CLUBS.map(c=>`<div class="clb" data-ov="t:${E(c)}">${crest(c,58)}<span>${E(c)}</span></div>`).join('')}</div>`:`<div class="hs">${vis().filter(l=>l[2]===CG).map(l=>`<button class="pl ${CUR===l[0]?'on':''}" data-lg="${l[0]}">${l[1]}</button>`).join('')}</div>`);
+const bgi=n=>/^https:/.test(n.img||'')?`url('${E(n.img)}')`:gr(n.title);
+const nrow=(n,i)=>`<div class="nr" data-ov="a:${i}"><div class="th" style="background-image:${bgi(n)}"></div><div><b>${E(n.title)}</b><small>${E(n.source||n.tag||'')} • ${E(n.time||'')}</small></div></div>`;
+const FACTS=['أقيمت أول نسخة من كأس العالم عام 1930 في الأوروغواي.','مدة المباراة 90 دقيقة على شوطين، مدة كل منهما 45 دقيقة.','ظهرت البطاقتان الصفراء والحمراء لأول مرة في كأس العالم 1970.','يحتسب الفوز 3 نقاط والتعادل نقطة واحدة في أغلب الدوريات.','لا يُحتسب التسلل من رمية التماس أو ركلة المرمى أو الركنية.','يتكون كل فريق من 11 لاعباً داخل الملعب بينهم حارس مرمى.','يتراوح محيط الكرة القانونية بين 68 و70 سم.'];
+const GL=[['التسلل','يكون اللاعب متسللاً إذا كان أقرب لخط مرمى الخصم من الكرة ومن ثاني آخر مدافع لحظة التمرير.'],['تقنية الفيديو VAR','مراجعة قرارات الأهداف والجزاءات والبطاقات الحمراء بالفيديو.'],['الأهداف المتوقعة xG','رقم يقيس جودة الفرصة واحتمال تحولها إلى هدف.'],['فارق الأهداف','الأهداف المسجلة ناقص المستقبلة، ويُستخدم لحسم التعادل في النقاط.'],['الشباك النظيفة','مباراة لم يستقبل فيها الفريق أي هدف.'],['هاتريك','ثلاثة أهداف للاعب واحد في المباراة نفسها.'],['الإعارة','انتقال مؤقت للاعب إلى نادٍ آخر لفترة محددة.'],['الشرط الجزائي','مبلغ يكفي لفسخ عقد اللاعب مع ناديه.']];
+const _ph=PG.home;PG.home=async()=>{const h=(await _ph()).replace(chips(),chips2()),f=FACTS[Math.floor(Date.now()/864e5)%FACTS.length];return h.replace('<h2 class="sc">مباريات اليوم',`<div class="cd fact"><b>💡 هل تعلم؟</b><p>${f}</p><a data-ov="k:">قاموس الكرة <span class="arw">←</span></a></div><h2 class="sc">مباريات اليوم`)};
+const _pt=PG.table;PG.table=async()=>(await _pt()).replace(chips(),chips2());
+const _pm=PG.more;PG.more=async()=>{const lg=LANGS.find(x=>x[0]===LANG);return(await _pm()).replace('data-act="resp"','data-sp="restart"').replace('<h2 class="sc">عام</h2><div class="cd">',`<h2 class="sc">عام</h2><div class="cd"><div class="sw" data-ov="g:" style="cursor:pointer"><span>اللغة</span><b>${lg[2]} ${lg[1]}</b></div><div class="sw" data-ov="k:" style="cursor:pointer"><span>قاموس الكرة</span><b>›</b></div><label class="sw"><span>إشعارات النظام</span><input type="checkbox" data-k="sys" ${ST.sys?'checked':''}><i></i></label><label class="sw"><span>اهتزاز الإشعارات</span><input type="checkbox" data-k="vib" ${ST.vib?'checked':''}><i></i></label>`)};
+const _pl=PG.live;PG.live=async()=>{if(CONFIG.demo!==false)return _pl();const ms=(await gM(TODAY)).filter(m=>m.st==='live');return ms.length?`<div class="cd">${ms.map(mr).join('')}</div>`:'<p class="mu c">لا توجد مباريات مباشرة الآن</p>'};
+SNL.length=0;SNL.push(['goal','هدف'],['kickoff','بداية المباراة'],['ht','نهاية الشوط الأول'],['second','بداية الشوط الثاني'],['ft','نهاية المباراة'],['notif','إشعار'],['news','خبر عاجل'],['sub','تبديل'],['card','بطاقة'],['var','تقنية الفيديو'],['penalty','ركلة جزاء'],['cheer','تشجيع الجماهير']);
+/* ===== الأخبار ===== */
+PG.news=async()=>{const n=await gN(CUR);if(!n.length)return chips2()+EMPTY;const f=n[0];return`<div class="hr" style="margin-bottom:12px"><span class="mu">تخصيص عرض الأخبار</span><button class="ib" data-ov="f:" style="color:var(--lm);font-size:24px">+</button></div>${chips2()}<div class="nf" data-ov="a:0" style="background-image:${bgi(f)}"><span class="tg2">${E(f.tag||'خبر')}</span><h2>${E(f.title)}</h2><small class="mu">${E(f.source||'')} • ${E(f.time||'')}</small></div><div class="g2" style="margin-top:12px">${n.slice(1,3).map((x,i)=>ncard(x,i+1)).join('')}</div><h2 class="sc">الأندية والمنتخبات</h2><div class="hs">${CLUBS.map(c=>`<div class="clb" data-ov="t:${E(c)}">${crest(c,64)}<span>${E(c)}</span></div>`).join('')}</div><h2 class="sc">آخر الأخبار</h2><div class="cd">${n.slice(3).map((x,i)=>nrow(x,i+3)).join('')}</div>`};
+const _oa=OVR.a;OVR.a=()=>{const r=_oa();if(r[1])r[1]=`<button class="ib" data-speak="${E(OV.id)}">${ic('voice',20)}</button>`+r[1];return r};
+OVR.N=()=>['الأخبار','',NC.map(nrow).join('')||EMPTY];
+/* ===== الانتقالات ===== */
+const TRD=[['مبابي','جناح أيمن','باريس سان جيرمان','أستون فيلا','انتقال','55.0M','يونيو 2031',1,71],['باركولا','جناح أيسر','باريس سان جيرمان','ليفربول','انتقال','125.0M','يونيو 2031',1,64],['غوريتسكا','خط وسط','بايرن','أستون فيلا','انتقال حر','—','يونيو 2028',1,58],['دي جريجوريو','حارس المرمى','يوفنتوس','ميلان','انتقال','1.3M','يونيو 2027',1,77],['روجيري','ظهير أيسر','أتلتيكو','برشلونة','انتقال','25.0M','يونيو 2031',1,69],['غريليش','جناح أيسر','مان سيتي','ليفربول','إعارة','—','يونيو 2027',1,62],['تيمبير','خط وسط','آرسنال','مارسيليا','انتقال','20.0M','يونيو 2031',1,81],['أنخيل','خط وسط','ريال مدريد','النصر','انتقال','4.0M','يونيو 2029',0,55],['وسام أبو علي','جناح','الأهلي','الهلال','تجديد','—','4 سنوات',1,48]];
+const tcp=t=>`<div class="tcp" data-ov="p:${E(t.n)}|${E(t.to)}">${pav(t.n,60,t.to)}<div class="tin"><b>${E(t.n)}</b><small>${E(t.pos)}</small></div><span class="fee">${E(t.fee==='—'?t.type:t.fee)}</span><div class="tto">${crest(t.to,34)}<small>حتى ${E(t.until)}</small></div></div>`;
+const trc=x=>{const v=(ST.vt||{})[x.i];return`<div class="cd trc"><div class="hr"><span>✔ ${E(x.type)}</span><span class="cf">${x.ok?'🔥 مؤكد':'⏳ غير مؤكد'}</span></div><div class="trp" data-ov="p:${E(x.n)}|${E(x.to)}">${pav(x.n,76,x.to)}<b>${E(x.n)}</b><small class="mu">${E(x.pos)}</small></div><div class="trt">${crest(x.from,24)}${E(x.from)} <span class="arw">←</span> ${crest(x.to,24)}${E(x.to)}</div><div class="pls"><span>${E(x.until)}</span>${x.fee&&x.fee!=='—'?`<span>${E(x.fee)}</span>`:''}</div><div class="vt"><button class="${v===1?'on':''}" data-vote="${x.i}:1">👍 ${x.up}%</button><button class="${v===0?'on':''}" data-vote="${x.i}:0">👎 ${100-x.up}%</button></div><details><summary>عرض التفاصيل</summary><p class="mu">${E(x.n)}: ${E(x.from)} ← ${E(x.to)} (${E(x.type)}).</p></details></div>`};
+PG.transfers=async()=>{
+  const rows=CONFIG.transfers?await CONFIG.transfers().catch(()=>[]):[];
+  const safe=Array.isArray(rows)?rows.filter(x=>x&&x.title):[];
+  const card=x=>`<a class="nsource" href="${E(x.url||'#')}" rel="noopener noreferrer"><div class="nthumb" style="background-image:${/^https:/.test(x.img||'')?`url('${E(x.img)}')`:gr(x.title)}"></div><div class="ncontent"><span class="tg2">${E(x.tag||'سوق الانتقالات')}</span><b>${E(x.title)}</b><small>${E(x.source||'المصدر الأصلي')} • ${E(x.time||'')}</small><p>${E(x.desc||'')}</p></div></a>`;
+  return `<div class="hr" style="margin-bottom:10px"><h2 style="margin:0;font-size:24px">أخبار سوق الانتقالات</h2><span class="lv" style="background:#ffffff22">تغطية صحفية</span></div><div class="cd"><p class="mu" style="line-height:1.8">أخبار وتقارير عن الانتقالات من ناشرين باللغة العربية. هذه تغطية صحفية وليست قائمة صفقات مؤكدة أو بيانات مالية رسمية.</p></div>${safe.length?`<div class="cd">${safe.map(card).join('')}</div>`:`<div class="cd c mu">لا توجد أخبار عربية عن سوق الانتقالات من المصدر حاليًا. حاول التحديث لاحقًا.</div>`}`;
+};
+/* ===== بروفايل اللاعب ===== */
+OVR.p=()=>{const[n,tm0,g]=OV.id.split('|'),r=rnd(hs(n)),no=7+(r()*20|0),age=20+(r()*16|0),gm=8+(r()*7|0),gl=+g||3+(r()*12|0),on=Math.max(2,gl-1-(r()*3|0)),club=tm0||'الأهلي',h=hs(club)%360,y0=2015+(r()*3|0),fav=ST.fav.includes(n),fl=FLAGS[hs(n)%FLAGS.length];
+const ring=(v,mx,l)=>`<div class="rg"><div class="rgc" style="--p:${Math.min(100,v/mx*100)}"><b>${v}</b></div><small>${l}</small></div>`;
+const tro=[['دوري الأبطال','🏆'],['الدوري','🥇'],['كأس السوبر','🏅'],['الكأس','🏆']].map(x=>`<div class="trf"><small>${x[0]}</small><span>${x[1]}</span><i>${1+(r()*4|0)}</i></div>`).join('');
+const cls=[club,ALL()[(r()*40|0)%ALL().length].name,ALL()[(r()*40|0)%ALL().length].name],tlh=cls.map((c,i)=>`<div class="tlr"><div class="tlb" style="margin-inline-start:${i*24}%;width:${80-i*24}%;background:${i===1?'#fff':'#e6b800'}"><span class="tlc">${crest(c,26)}</span></div></div>`).join('');
+return['',`<button class="ib" data-share="${E(n)}">${ic('share',20)}</button><button class="ib" data-fav="${E(n)}" style="color:${fav?'var(--lm)':'inherit'}">${ic('bookmark',20,fav?'currentColor':'none')}</button>`,
+`<div class="pf"><div class="pfh" style="--h:${h}"><div class="pfw">${E([...n][0])}</div><div class="pfb"><span class="cc">${crest(club,40)}</span><span class="ff">${fl}</span></div><h1>${E(n)}</h1><div class="pfs"><svg viewBox="0 0 48 44" width="52"><path d="M12 4l9 3a3 3 0 0 0 6 0l9-3 10 9-7 6-3-3v22H12V16l-3 3-7-6z" fill="hsl(${h} 75% 45%)"/></svg><b>${no}</b><small>مهاجم</small></div><div class="pfp">${pav(n,210,club)}</div></div>
+<div class="g3 pfx">${[['العمر',age],['المباريات',gm],['الأهداف',gl]].map(x=>`<div class="tl2"><small>${x[0]}</small><b>${x[1]}</b></div>`).join('')}</div>
+<div class="nd"><i></i><b>يتم الحديث عنه الآن</b><span class="avs">${[0,1,2,3].map(i=>pav(NM[(i+hs(n))%NM.length],26)).join('')}</span></div>
+<div class="cd"><div class="hr">${pav(n,40,club)}<div style="flex:1;padding:0 10px"><b>أخبار الكرة</b><small class="mu" style="display:block">${E(n)}</small></div><button class="ib" data-share="${E(n)}">${ic('share',18)}</button></div><div class="nwr"><span><b>22</b>أكتوبر</span><p>${E(n)} يواصل تألقه ويقترب من رقم قياسي جديد مع ${E(club)}</p></div></div>
+<div class="cd"><div class="pfg"><div class="boot"><svg viewBox="0 0 24 24" width="36"><path d="M3 15c0-3 2-5 5-5l2-4 3 1v4l7 2v4H3z" fill="#0a2a10"/></svg><b>${gm}</b></div>${ring(on,gl,'تسديدات على المرمى')}${ring(gl,gl+3,'الأهداف المسجلة')}</div></div>
+<div class="cd"><h3>الانضباط</h3><div class="g4">${[[8+(r()*8|0),'فاولات مكتسبة',''],[3+(r()*6|0),'فاولات مرتكبة',''],[r()*5|0,'بطاقات صفراء','<u class="yc"></u>'],[r()*2|0,'بطاقات حمراء','<u class="rc2"></u>']].map(x=>`<div><b>${x[0]}${x[2]}</b><small>${x[1]}</small></div>`).join('')}</div></div>
+<div class="cd"><h3>الألقاب</h3><div class="hs" style="margin:0;padding:0">${tro}</div></div>
+<div class="cd" style="margin-bottom:30px"><h3>المسيرة</h3><div class="yrs">${[0,1,2,3].map(i=>`<span>${y0+i}</span>`).join('')}</div>${tlh}</div></div>`]};
+/* ===== ملعب التشكيلة والتوقع ===== */
+function pitch2(hm,aw){const f=[[50,93],[15,78],[38,80],[62,80],[85,78],[28,62],[50,65],[72,62],[20,47],[50,44],[80,47]],pl=(t,mr2)=>f.map(([x,y],i)=>{const gk=i===0,hh=hs(t)%360;return`<div class="pp" style="left:${x}%;top:${mr2?100-y:y}%"><i style="background:${gk?'linear-gradient(#ffd23a,#e0a800)':`linear-gradient(hsl(${hh} 70% 50%),hsl(${hh} 70% 32%))`};color:${gk?'#000':'#fff'}">${i+1}</i>${LANG==='ar'?`<span>${NM[(hs(t)+i*3)%NM.length]}</span>`:''}</div>`}).join('');
+return`<div class="pt"><div class="pn">${crest(aw,22)}${E(aw)}<em>4-3-3</em></div><div class="pitch2"><svg viewBox="0 0 68 105" preserveAspectRatio="none"><g fill="none" stroke="#fff" stroke-opacity=".85" stroke-width=".4"><rect x="1" y="1" width="66" height="103"/><path d="M1 52.5h66"/><circle cx="34" cy="52.5" r="9.15"/><rect x="13.85" y="1" width="40.3" height="16.5"/><rect x="24.85" y="1" width="18.3" height="5.5"/><rect x="13.85" y="87.5" width="40.3" height="16.5"/><rect x="24.85" y="98.5" width="18.3" height="5.5"/><path d="M26.7 17.5a9.15 9.15 0 0 0 14.6 0M26.7 87.5a9.15 9.15 0 0 1 14.6 0"/></g><g fill="#fff"><circle cx="34" cy="52.5" r=".6"/><circle cx="34" cy="12" r=".6"/><circle cx="34" cy="93" r=".6"/></g></svg>${pl(aw,1)}${pl(hm,0)}</div><div class="pn">${crest(hm,22)}${E(hm)}<em>4-3-3</em></div></div>`}
+const _om=OVR.m;OVR.m=function(){const r=_om(),m=OV.id==='L'?liveM():MC[OV.id];if(!m)return r;if(OV.tab==='l')r[2]=r[2].replace(/<div class="pitch">[\s\S]*$/,pitch2(m.h,m.a));else if(CONFIG.demo!==false&&m.st==='ns'&&OV.tab==='s'){const q=rnd(hs(m.id)),a=34+(q()*26|0),c=18+(q()*10|0);r[2]=r[2].replace('<div class="sg"',`<div class="cd pr"><small class="mu">توقع تجريبي</small><div class="pb"><i style="width:${a}%"></i><i class="d" style="width:${c}%"></i><i class="aw"></i></div><div class="sv"><b>${E(m.h)} ${a}%</b><span>تعادل ${c}%</span><b>${E(m.a)} ${100-a-c}%</b></div></div><div class="sg"`)}return r};
+const _omSourceSafe=OVR.m;OVR.m=function(){const r=_omSourceSafe(),m=OV.id==='L'?liveM():MC[OV.id];if(CONFIG.demo===false&&m&&(OV.tab==='t'||OV.tab==='l')){const marker=OV.tab==='t'?'<div class="cd">':'<div class="pitch">';const at=r[2].indexOf(marker);if(at>=0)r[2]=r[2].slice(0,at)+(OV.tab==='t'?'<p class="mu c">إحصائيات هذه المباراة غير متاحة من مصدر البيانات الحالي.</p>':'<p class="mu c">التشكيلة الرسمية غير متاحة من مصدر البيانات الحالي.</p>')}return r};
+const _ovPlayer=OVR.p;OVR.p=function(){if(CONFIG.demo===false){const z=(OV.id||'').split('|'),n=z[0],x=SCACHE.find(p=>p.name===n)||{name:n,team:z[1]||'',goals:Number(z[2])||0,assists:Number(z[3])||0};return[E(n),'',`<div class="cd"><div class="hr">${pav(n,58,x.team)}<div><b>${E(n)}</b><small class="mu" style="display:block">${E(x.team||'')}</small></div></div><div class="g2" style="margin-top:12px">${tile('أهداف في قائمة المصدر',x.goals||0)}${tile('تمريرات حاسمة في قائمة المصدر',x.assists||0)}</div><p class="mu c" style="line-height:1.8">الأرقام المعروضة هي فقط ما أعاده مصدر البطولة. العمر والمركز والمسيرة وبقية الإحصائيات غير متاحة من المصدر الحالي.</p></div>`]}return _ovPlayer()};
+const _ovTeam=OVR.t;OVR.t=function(){if(CONFIG.demo===false){const n=OV.id||'',x=ALL().find(z=>z.name===n);if(!x||!Number.isFinite(Number(x.p))||!Number.isFinite(Number(x.pts)))return[E(n),'',`<div class="cd"><div class="hr">${crest(n,58)}<b>${E(n)}</b></div><p class="mu c">الفريق موجود في فهرس المصدر، لكن لا تتوفر له بيانات ترتيب موثقة في هذه البطولة حاليًا.</p></div>`];return[E(n),'',`<div class="cd"><div class="hr">${crest(n,58)}<b>${E(n)}</b></div><div class="g2" style="margin-top:12px">${tile('النقاط',x.pts)}${tile('المباريات',x.p)}${tile('فوز / تعادل / خسارة',`${x.w} / ${x.d} / ${x.l}`)}${tile('الأهداف له / عليه',`${x.gf} / ${x.ga}`)}</div><p class="mu c">هذه أرقام جدول البطولة من المصدر؛ لا تتوفر هنا بعد بيانات التشكيلة وقائمة اللاعبين التفصيلية.</p></div>`]}return _ovTeam()};
+/* ===== اللغة والقاموس والإشعارات ===== */
+OVR.g=()=>['اللغة','',`<div class="lgl">${LANGS.map(l=>`<div class="lgc ${LANG===l[0]?'on':''}" data-lang="${l[0]}"><b>${l[1]}</b><span>${l[2]}</span></div>`).join('')}</div>`];
+OVR.k=()=>['قاموس الكرة','',`<div class="cd">${GL.map(x=>`<div style="padding:12px 0;border-bottom:1px solid var(--ln)"><b style="color:var(--lm)">${x[0]}</b><p style="margin:4px 0 0;line-height:1.8">${x[1]}</p></div>`).join('')}</div>`];
+OVR.n=()=>{UNR=0;bd();const l=NT.filter(x=>NF==='all'||(NF==='g'?x.k==='g':NF==='c'?x.k==='c'||x.k==='p':!x.k));return['الإشعارات',`<button class="ib" data-clr style="font-size:11px;width:auto;padding:0 10px">مسح الكل</button>`,`<div class="hs" style="margin-bottom:10px">${[['all','الكل'],['g','أهداف'],['c','بطاقات'],['n','أخبار']].map(x=>`<button class="pl ${NF===x[0]?'on':''}" data-nf="${x[0]}">${x[1]}</button>`).join('')}</div>`+(l.length?`<div class="cd">${l.map(x=>`<div class="sr" ${x.k?'data-ov="m:L"':''}><span style="font-size:22px">${{g:'⚽',c:'🟨',p:'⏱'}[x.k]||'📰'}</span><div><b>${E(x.t)}</b><small style="margin:0;display:block">${E(x.b)}</small></div></div>`).join('')}</div>`:'<p class="mu c">لا توجد إشعارات بعد. ابدأ البث التجريبي من زر ⚡</p>')]};
+const _fire=fire;fire=function(e){_fire(e);if(NT[0]&&!NT[0].k)NT[0].k=e[1]==='g'?'g':['yc','rc','sub','var'].includes(e[1])?'c':'p'};
+banner=function(e,tp){if(!ST[tp])return;const g=e.t==='g',tm1=e.s==='a'?'الزمالك':'الأهلي',as=AST[e.m],tx=E(e.x||TT[e.t]);if(ST.vib&&navigator.vibrate)navigator.vibrate(g?[120,60,120,60,240]:[80]);if(ST.sys&&window.Notification&&Notification.permission==='granted'){try{new Notification('كورة X',{body:`${TT[e.t]} ${e.x||''} • الأهلي ${LIVE.hs}-${LIVE.as} الزمالك`})}catch(x){}}
+const b=document.createElement('div');b.className='bn'+(g?' gl':'');b.innerHTML=`<div class="bt1"><span>كورة X • ${lgn('egy')}</span><span>${TT[e.t]} • ${mtx()}</span></div><div class="bm">${g?pav(e.x,62,tm1):`<span class="eic">${EI[e.t]}</span>`}<div class="bw"><b>${tx}</b><small>${g&&as?'تمريرة: '+E(as):E(tm1)}</small></div><div class="bsc">${crest('الأهلي',30)}<span>${LIVE.hs} - ${LIVE.as}</span>${crest('الزمالك',30)}</div></div><div class="tl">${LIVE.ev.filter(x=>['g','rc'].includes(x.t)).map(x=>`<i class="${x.t}" style="inset-inline-start:${x.m/90*100}%"></i>`).join('')}</div><div class="bac"><button data-ov="m:L">متابعة المباراة</button><button data-share="${tx} — الأهلي ${LIVE.hs}-${LIVE.as} الزمالك">مشاركة</button></div>`;show(b)};
+const _sh=show;show=function(b){tr(b);_sh(b)};
+/* ===== الشاشة الافتتاحية ===== */
+const SL=[['⚽','تابع كل مباراة','نتائج لحظية وترتيب أشهر الدوريات والبطولات في مكان واحد'],['🔔','إشعارات الأهداف بصورة اللاعب','أصوات واقعية وإشعارات ذكية لحظة بلحظة'],['🔁','أخبار وانتقالات أولاً بأول','تابع فريقك المفضل وأحدث صفقات اللاعبين']];
+function spl(s){const e=$('#sp');if(s<0){e.classList.remove('on');return}SPS=s;e.className='sp on s'+s;let h;
+if(s===0)h=`<div class="orb"></div><div class="lg0"></div><h1 class="t0">كورة <b>X</b></h1><p class="s0">عالم الكرة بين يديك</p><div class="ld"><i></i></div>`;
+else if(s<4){const x=SL[s-1];h=`<button class="skp" data-sp="skip">تخطي</button><div class="ill"><span>${x[0]}</span><i class="o1">⚽</i><i class="o2">🏆</i></div><h2>${x[1]}</h2><p>${x[2]}</p><div class="dots">${[1,2,3].map(i=>`<i class="${i===s?'on':''}"></i>`).join('')}</div><button class="bt" data-sp="next">${s===3?'متابعة':'التالي'}</button>`}
+else h=`<h2>اختر لغتك</h2><p>العربية هي اللغة الأساسية، ويمكنك التغيير لاحقاً</p><div class="lgl">${LANGS.map(l=>`<div class="lgc ${LANG===l[0]?'on':''}" data-lang="${l[0]}"><b>${l[1]}</b><span>${l[2]}</span></div>`).join('')}</div><button class="bt" data-sp="fin">ابدأ الآن</button>`;
+e.innerHTML=h;tr(e);if(s===0)setTimeout(()=>spl(ST.onb?-1:1),1700)}
+/* ===== الأحداث ===== */
+document.addEventListener('click',e=>{const t=e.target.closest('[data-cg],[data-sp],[data-lang],[data-trf],[data-trs],[data-vote],[data-nf],[data-speak],[data-clr]');if(!t)return;const d=t.dataset;
+if(d.cg){CG=d.cg;render()}else if(d.trf){TRF=d.trf;render()}else if(d.trs){TRS=d.trs;render()}
+else if(d.vote){const[i,v]=d.vote.split(':');ST.vt=ST.vt||{};ST.vt[i]=+v;save();render()}
+else if(d.nf){NF=d.nf;ovr()}else if(d.clr!==undefined){NT.length=0;ovr()}
+else if(d.speak!==undefined){const n=NC[+d.speak];if(!n||!window.speechSynthesis)return;if(speechSynthesis.speaking){speechSynthesis.cancel();return}const u=new SpeechSynthesisUtterance(n.title+'. '+(n.body||n.desc||''));u.lang={ar:'ar-SA',en:'en-US',fr:'fr-FR',es:'es-ES'}[LANG];speechSynthesis.speak(u)}
+else if(d.lang){ST.lang=d.lang;save();applyLang();if(OV)ovr();if(SPS===4)spl(4)}
+else if(d.sp){if(d.sp==='next')spl(SPS+1);else if(d.sp==='skip')spl(4);else if(d.sp==='restart')spl(1);else{spl(-1);ST.onb=1;save();op('f:ob')}}});
+document.addEventListener('change',e=>{const t=e.target;if(t.dataset.k==='sys'&&t.checked){if(window.KXNative&&KXNative.requestNotifications)KXNative.requestNotifications();else if(window.Notification)Notification.requestPermission()}});
+const _R=render;render=async function(){await _R();tr($('#pg'));tr($('#nv'))};
+const _O=ovr;ovr=function(){_O();const o=$('#ov');o.dataset.t=OV?OV.t:'';tr(o)};
+// Settings now live in the bottom navigation; the header keeps search and notifications only.
+applyLang();spl(0);
+</script>
+<script>
+/* Native Android bridge + factual match details. No invented events, stats or lineups. */
+const KX_MATCH_DETAILS=Object.create(null);
+const _kxOpen=op;
+op=function(v){_kxOpen(v);if(OV&&OV.t==='m'&&OV.id!=='L'&&CONFIG.matchDetails&&!KX_MATCH_DETAILS[OV.id]){const match=MC[OV.id];if(match){const id=OV.id;CONFIG.matchDetails(match.lg,id).then(data=>{if(data)KX_MATCH_DETAILS[id]=data;if(OV&&OV.t==='m'&&OV.id===id)ovr();}).catch(()=>{});}}};
+const _kxMatchRender=OVR.m;
+OVR.m=function(){
+ const r=_kxMatchRender(),id=OV&&OV.id,d=KX_MATCH_DETAILS[id];
+ if(!d||!d.header)return r;
+ const events=Array.isArray(d.events)?d.events.filter(x=>x&&x.minute):[];
+ if(OV.tab==='s'&&events.length){
+  const html=`<div class="cd">${events.map(e=>`<div class="ev n"><em>${E(e.minute)}</em><span>⚽</span><b>${E(e.player||e.type||'حدث المباراة')}</b></div>`).join('')}</div>`;
+  const msg='<p class="mu c">تفاصيل أحداث المباراة غير متاحة من مصدر البيانات الحالي.</p>';
+  if(r[2].includes(msg))r[2]=r[2].replace(msg,html);
+ }
+ if(OV.tab==='t'&&d.statistics){
+  let arr=[];const groups=Array.isArray(d.statistics)?d.statistics:(d.statistics.statistics||[]);
+  groups.forEach(g=>{(g.stats||[]).forEach(s=>{if(s&&s.name)arr.push(s);});});
+  if(arr.length){const html=`<div class="cd">${arr.slice(0,24).map(s=>`<div class="sw"><span>${E(s.name||s.label||'')}</span><b>${E(s.displayValue||s.value||'')}</b></div>`).join('')}</div>`;
+   const msg='<p class="mu c">إحصائيات هذه المباراة غير متاحة من مصدر البيانات الحالي.</p>';
+   if(r[2].includes(msg))r[2]=r[2].replace(msg,html);
+  }
+ }
+ if(OV.tab==='l'&&d.rosters){
+  const groups=Array.isArray(d.rosters)?d.rosters:(d.rosters.teams||[]),cards=[];
+  groups.forEach(g=>{
+   const roster=g.roster||g.players||g.athletes||[];
+   const starters=roster.filter(p=>p&&(p.starter===true||p.isStarter===true||(p.status&&/starter/i.test(p.status.type&&p.status.type.name||p.status.displayName||''))));
+   if(starters.length){const team=g.team&&(g.team.displayName||g.team.name)||'الفريق';
+    cards.push(`<div class="cd"><div class="hr"><b>${E(team)}</b><span class="mu">التشكيل الأساسي الرسمي</span></div>${starters.map(p=>{const a=p.athlete||p.player||p,n=a.displayName||a.fullName||a.name||'',pos=p.position&&(p.position.abbreviation||p.position.name)||'',num=p.jersey||a.jersey||'';return `<div class="sr"><b>${E(num)}</b><span>${E(n)}</span><small>${E(pos)}</small></div>`;}).join('')}</div>`);
+   }
+  });
+  if(cards.length){const msg='<p class="mu c">التشكيلة الرسمية غير متاحة من مصدر البيانات الحالي.</p>';if(r[2].includes(msg))r[2]=r[2].replace(msg,cards.join(''));}
+ }
+ return r;
+};
+/* Real-score polling while the app is visible; no fake goal or scorer is generated. */
+let KX_LAST_SCORES=Object.create(null),KX_SCORE_READY=false;
+function kxGoalNotice(match,side){
+ const team=side==='home'?match.h:match.a;
+ const score=`${match.h} ${match.hs} - ${match.as} ${match.a}`;
+ const message=`هدف لفريق ${team} • ${score}`;
+ if(ST.ng){play('goal');if(ST.vib&&navigator.vibrate)navigator.vibrate([120,70,160]);NT.unshift({t:'هدف!',b:message,k:'g'});UNR++;bd();simple('⚽ هدف لـ '+team,message);}
+ if(ST.ng&&ST.sys&&window.KXNative&&KXNative.showNotification)KXNative.showNotification('⚽ هدف لـ '+team,message);
+ else if(ST.ng&&ST.sys&&window.Notification&&Notification.permission==='granted'){try{new Notification('⚽ هدف لـ '+team,{body:message});}catch(_){}}
+}
+async function kxPollScores(){
+ if(document.visibilityState==='hidden')return;
+ TODAY.setTime(Date.now());
+ const list=await gM(new Date()),next=Object.create(null);
+ (list||[]).forEach(m=>{
+  next[m.id]=m;
+  const old=KX_LAST_SCORES[m.id];
+  if(KX_SCORE_READY&&old&&old.st==='live'&&(m.st==='live'||m.st==='ft')){
+   if(m.hs>old.hs)kxGoalNotice(m,'home');
+   if(m.as>old.as)kxGoalNotice(m,'away');
+  }
+ });
+ KX_LAST_SCORES=next;KX_SCORE_READY=true;
+ if(P==='home'||P==='live'||(P==='matches'&&DATE===0))render();
+}
+setTimeout(kxPollScores,6000);
+setInterval(kxPollScores,150000);
+
+/* Native RSS bridge callback receives XML only from the fixed Google News RSS host. */
+</script>
+<style>
+.nsource{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:12px;border-bottom:1px solid var(--ln);color:inherit;text-decoration:none;align-items:start}.nsource:last-child{border-bottom:0}.nthumb{height:112px;border-radius:16px;background-size:cover;background-position:center;background-color:var(--s2)}.ncontent{display:flex;flex-direction:column;gap:5px;min-width:0}.ncontent .tg2{align-self:flex-start}.ncontent b{font-size:15px;line-height:1.6}.ncontent small{color:var(--mu);font-size:11px}.ncontent p{margin:0;color:var(--mu);font-size:12px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+</style>
+<script>if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js'))</script></body>
+</html>
