@@ -4443,6 +4443,8 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
 
       - name: Install Android SDK packages
         run: |
@@ -4484,7 +4486,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- README.md tests INTEGRATION-STATUS.md .gitignore .github android korax-app
+          git add -A -- README.md tests INTEGRATION-STATUS.md .gitignore android korax-app
           if ! git diff --cached --quiet; then
             git commit -m "Restore reviewed KoraX Android project source"
             git push origin HEAD:main
