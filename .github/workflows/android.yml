@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/android.yml'
+      - 'korax-app/**'
+      - 'android/**'
+      - 'tests/**'
   workflow_dispatch:
 
 permissions:
